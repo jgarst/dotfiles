@@ -8,5 +8,10 @@ set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
 set runtimepath=$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after,$VIM,$VIMRUNTIME
 let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc"
 
+" line numbers
 set relativenumber
 set number
+
+" syntax highlighting
+filetype plugin on
+syntax on
