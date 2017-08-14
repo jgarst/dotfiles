@@ -1,8 +1,9 @@
 # Ignore everything
-*
+/*
 
 # Except
 !fish/
 !alacritty/
 !vim/
 !.gitignore
+!git/
