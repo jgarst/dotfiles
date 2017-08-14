@@ -1,0 +1,26 @@
+[user]
+	email = cultofjared@gmail.com
+	name = Jared Garst
+[push]
+	default = current
+[credential]
+	helper = cache --timeout=3600
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[alias]
+	logall = log --all --decorate --graph --oneline
+	a = add
+	commitall = commit --all --message
+	i = init
+	p = push --set-upstream
+[merge]
+	ff = only
+[core]
+	editor = vim 
+	excludesfile = /home/jared/.config/git/gitignore
+[init]
+	templatedir = /home/jared/.config/git/templatedir
+[rebase]
+	autosquash = true
