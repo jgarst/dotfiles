@@ -15,3 +15,6 @@ set number
 " syntax highlighting
 filetype plugin on
 syntax on
+
+" tab, trailing whitespace, nonbreaking space, end of line, line continuation
+set list listchars=tab:│\ ,trail:·,nbsp:·,eol:¬,precedes:«,extends:»
