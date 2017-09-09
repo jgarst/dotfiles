@@ -41,3 +41,10 @@ set spell
 
 " have yanking use system clipboard
 set clipboard=unnamedplus
+
+" save position in file
+augroup resCur
+    autocmd!
+    autocmd BufReadPost * call setpos(".", getpos("'\""))
+augroup END
+
