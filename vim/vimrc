@@ -38,3 +38,6 @@ set linebreak
 
 " spell checking
 set spell
+
+" have yanking use system clipboard
+set clipboard=unnamedplus
