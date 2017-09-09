@@ -23,3 +23,9 @@ set list listchars=tab:│\ ,trail:·,nbsp:·,eol:¬,precedes:«,extends:»
 set termguicolors
 let g:gruvbox_italic=1
 colorscheme gruvbox
+
+" smart line breaking
+set linebreak
+
+" spell checking
+set spell
