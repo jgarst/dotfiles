@@ -5,7 +5,7 @@ set nocompatible
 set directory=$XDG_CACHE_HOME/vim,~/,/tmp
 set backupdir=$XDG_CACHE_HOME/vim,~/,/tmp
 set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
-set runtimepath=$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after,$VIM,$VIMRUNTIME
+set runtimepath=$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after,$VIM,$VIMRUNTIME,/usr/share/vim/vimfiles
 let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc"
 
 " line numbers
@@ -18,3 +18,8 @@ syntax on
 
 " tab, trailing whitespace, nonbreaking space, end of line, line continuation
 set list listchars=tab:│\ ,trail:·,nbsp:·,eol:¬,precedes:«,extends:»
+
+" gruvbox colorscheme
+set termguicolors
+let g:gruvbox_italic=1
+colorscheme gruvbox
