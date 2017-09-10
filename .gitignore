@@ -7,3 +7,6 @@
 !vim/
 !.gitignore
 !git/
+
+# But still
+vim/spell/en.utf-8.add.spl

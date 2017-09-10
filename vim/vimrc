@@ -39,6 +39,9 @@ set linebreak
 " spell checking
 set spell
 
+" do not spell check words that are all capitals
+syn match AcronymNoSpell '\<\(\u\|\d\)\{2,}s\?\>' contains=@NoSpell
+
 " have yanking use system clipboard
 set clipboard=unnamedplus
 
