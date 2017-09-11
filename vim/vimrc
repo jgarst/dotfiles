@@ -10,7 +10,7 @@ set runtimepath=$XDG_CONFIG_HOME/vim
     \,$VIM
     \,$VIMRUNTIME
     \,/usr/share/vim/vimfiles
-let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc"
+let $MYVIMRC='$XDG_CONFIG_HOME/vim/vimrc'
 
 " line numbers
 set relativenumber
@@ -25,10 +25,10 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-" tab, trailing whitespace, nonbreaking space, end of line, line continuation
+" tab, trailing white space, non breaking space, end of line, line continuation
 set list listchars=tab:│\ ,trail:·,nbsp:·,eol:¬,precedes:«,extends:»
 
-" gruvbox colorscheme
+" gruvbox color scheme
 set termguicolors
 let g:gruvbox_italic=1
 colorscheme gruvbox
