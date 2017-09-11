@@ -42,7 +42,7 @@ set spell
 " do not spell check words that are all capitals
 syn match AcronymNoSpell '\<\(\u\|\d\)\{2,}s\?\>' contains=@NoSpell
 
-" do not complain about lower case sentences in git commits
+" do not complain about lower case in git commits
 autocmd FileType gitcommit setlocal spellcapcheck=
 
 " have yanking use system clipboard
