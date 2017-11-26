@@ -149,6 +149,6 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 20
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20
 
 #Player control
-bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioPlay exec xmms2 toggle
+bindsym XF86AudioNext exec xmms2 next
+bindsym XF86AudioPrev exec xmms2 prev
