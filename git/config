@@ -10,7 +10,11 @@
 	lg = log --all --decorate --graph --oneline
 [merge]
 	ff = only
+	tool = vimdiff
+	conflictstyle = diff3
 [core]
 	editor = vim 
 [rebase]
 	autosquash = true
+[mergetool]
+	prompt = false
