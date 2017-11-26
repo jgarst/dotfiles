@@ -12,8 +12,5 @@
 	ff = only
 [core]
 	editor = vim 
-	excludesfile = /home/jared/.config/git/gitignore
-[init]
-	templatedir = /home/jared/.config/git/templatedir
 [rebase]
 	autosquash = true
