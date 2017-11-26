@@ -13,8 +13,6 @@ set -x PASSWORD_STORE_DIR /home/jared/.config/pass
 set -x EDITOR "vim"
 set -gx VIMINIT 'let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 
-set -gx PATH ~/bin ~/.local/bin $PATH
-
 # path to virsh machine
 set -x LIBVIRT_DEFAULT_URI qemu:///system
 
