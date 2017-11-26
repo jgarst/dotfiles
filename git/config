@@ -7,11 +7,7 @@
 	smudge = git-lfs smudge %f
 	required = true
 [alias]
-	logall = log --all --decorate --graph --oneline
-	a = add
-	commitall = commit --all --message
-	i = init
-	p = push --set-upstream
+	lg = log --all --decorate --graph --oneline
 [merge]
 	ff = only
 [core]
