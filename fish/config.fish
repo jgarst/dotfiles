@@ -19,6 +19,7 @@ set -gx PATH ~/bin ~/.local/bin $PATH
 set -x LIBVIRT_DEFAULT_URI qemu:///system
 
 alias ffplay "ffplay -loglevel panic"
+alias print "lpr"
 
 # go path
 set -x GOPATH $HOME
