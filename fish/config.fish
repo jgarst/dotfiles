@@ -21,3 +21,4 @@ alias print "lpr"
 
 # go path
 set -x GOPATH $HOME
+set -gx PATH $GOPATH/bin $PATH
