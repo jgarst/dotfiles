@@ -19,6 +19,8 @@ set -x LIBVIRT_DEFAULT_URI qemu:///system
 alias ffplay "ffplay -loglevel panic"
 alias print "lpr"
 
+alias tmux "tmux -f $XDG_CONFIG_HOME/tmux.conf"
+
 # go path
 set -x GOPATH $HOME
 set -gx PATH $GOPATH/bin $PATH
