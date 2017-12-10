@@ -8,6 +8,7 @@
 !.gitignore
 !git/
 !i3/
+!.bashrc
 
 # But still
 vim/spell/en.utf-8.add.spl
