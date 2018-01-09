@@ -15,6 +15,14 @@ let $MYVIMRC='$XDG_CONFIG_HOME/vim/vimrc'
 " disable modelines, for absolute control
 set nomodeline
 
+" TODO: there is probably a less latent way of doing this outside of vimscript
+" function to remove trailing whitespace
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+
 " line numbers
 set relativenumber
 set number
@@ -54,6 +62,8 @@ autocmd FileType gitcommit setlocal spellcapcheck=
 " python
 " 80 char ruler
 autocmd Filetype python set colorcolumn=80
+" trim trailing whitespace
+autocmd BufWritePre *.py :call TrimWhitespace()
 
 " have yanking use system clipboard
 set clipboard=unnamedplus
