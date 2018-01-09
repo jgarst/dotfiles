@@ -12,6 +12,9 @@ set runtimepath=$XDG_CONFIG_HOME/vim
     \,/usr/share/vim/vimfiles
 let $MYVIMRC='$XDG_CONFIG_HOME/vim/vimrc'
 
+" disable modelines, for absolute control
+set nomodeline
+
 " line numbers
 set relativenumber
 set number
