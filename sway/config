@@ -204,6 +204,9 @@ bar {
     }
 }
 
+# fast access to password manager
+bindsym $mod+p exec env PASSWORD_STORE_DIR=/home/jared/.config/pass passmenu
+
 include /etc/sway/config.d/*
 
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
