@@ -76,3 +76,6 @@ augroup END
 
 " highlight searches
 set hlsearch
+
+" Netrw supports reading and writing across networks. Disable it.
+let g:netrw_dirhistmax = 0
