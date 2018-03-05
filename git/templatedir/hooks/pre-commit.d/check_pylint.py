@@ -6,7 +6,6 @@ from https://gist.github.com/nivbend/7e0e306a98138916b3c9#file-run_pylint-py
 
 from subprocess import check_output, CalledProcessError
 from sys import stderr
-from os.path import isfile
 from pathlib import Path
 
 (SUCCESS,
@@ -28,7 +27,7 @@ def _is_python_script(myfile):
 
     if not myfile.suffix == '.py':
         try:
-            with open(myfile, 'rb') as contents:
+            with open(myfile, 'r') as contents:
                 first_line = contents.readline()
         except OSError:
             return False
