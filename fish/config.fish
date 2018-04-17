@@ -9,9 +9,9 @@ set -gx XDG_CACHE_HOME $HOME/.cache
 # personal scripts
 set -gx PATH $XDG_CONFIG_HOME/bin $PATH
 
-set -x PYTHONSTARTUP ~/.config/python/python-startup.py
-set -x IPYTHONDIR ~/.config/ipython
-set -x PASSWORD_STORE_DIR /home/jared/.config/pass
+set -x PYTHONSTARTUP $XDG_CONFIG_HOME/python/python-startup.py
+set -x IPYTHONDIR $XDG_CONFIG_HOME/ipython
+set -x PASSWORD_STORE_DIR $XDG_CONFIG_HOME/pass
 
 set -x EDITOR "vim"
 set -gx VIMINIT 'let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
