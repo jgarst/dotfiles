@@ -6,6 +6,9 @@ set -gx XDG_DATA_DIRS /usr/local/share/:/usr/share
 set -gx XDG_CONFIG_DIRS /etc/xdg
 set -gx XDG_CACHE_HOME $HOME/.cache
 
+# personal scripts
+set -gx PATH $XDG_CONFIG_HOME/bin $PATH
+
 set -x PYTHONSTARTUP ~/.config/python/python-startup.py
 set -x IPYTHONDIR ~/.config/ipython
 set -x PASSWORD_STORE_DIR /home/jared/.config/pass
