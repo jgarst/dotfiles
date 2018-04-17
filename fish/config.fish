@@ -18,6 +18,7 @@ set -x LIBVIRT_DEFAULT_URI qemu:///system
 
 alias ffplay "ffplay -loglevel panic"
 alias print "lpr"
+alias ctags "ctags --options=$XDG_CONFIG_HOME/ctags"
 
 alias tmux "tmux -f $XDG_CONFIG_HOME/tmux.conf"
 
