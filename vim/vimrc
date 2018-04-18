@@ -83,6 +83,9 @@ let g:netrw_dirhistmax = 0
 " ALE sign gutter popping in and out is too much movement
 let g:ale_sign_column_always = 1
 
+" do not complain about missing stub files
+let g:ale_python_mypy_options = '--ignore-missing-imports'
+
 " Use bash for shell commands
 set shell=/usr/bin/bash
 let $BASH_ENV = "$XDG_CONFIG_HOME/bash_aliases"
