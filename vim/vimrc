@@ -89,3 +89,6 @@ let g:ale_python_mypy_options = '--ignore-missing-imports'
 " Use bash for shell commands
 set shell=/usr/bin/bash
 let $BASH_ENV = "$XDG_CONFIG_HOME/bash_aliases"
+
+" textwidth of 72 for mutt emails
+au BufRead /tmp/mutt-* set tw=72
