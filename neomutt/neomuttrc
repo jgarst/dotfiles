@@ -44,3 +44,8 @@ set from = "jhg@fastmail.com"
 set use_from = yes
 
 set smtp_url = smtps://$my_user:$my_pass@smtp.fastmail.com
+
+# copy/move dialogs
+macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
+macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+
