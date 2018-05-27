@@ -27,6 +27,8 @@ set sidebar_width = 24
 set status_chars  = " *%A"
 set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
 
+# Faster folder switch
+set sleep_time = 0
 
 
 # do not duplicate sent saving
