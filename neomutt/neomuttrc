@@ -27,6 +27,11 @@ set sidebar_width = 24
 set status_chars  = " *%A"
 set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
 
+# arrow keys to move around folders
+bind index,pager <down>     sidebar-next
+bind index,pager <up>       sidebar-prev
+bind index,pager <right>    sidebar-open
+
 # Faster folder switch
 set sleep_time = 0
 
