@@ -1,15 +1,15 @@
 source vim-keys.rc
+set my_user = jhg@fastmail.com
+set my_pass = `pass fastmail/mutt`
 
 
-# Maildir is an alternate mail storage format
-set mbox_type = Maildir
+set mbox_type = Maildir  # Maildir is an alternate mail storage format
 set folder = ~/mail
 set spoolfile = +jhg/INBOX
 
-# Specify where to save and/or look for postponed messages.
-set postponed = "jhg/Drafts"
-set mbox = "jhg/Archive"
-set trash = "+jhg/Trash"
+
+set postponed = "+jhg/Drafts"  # Specify location for postponed messages.
+set trash = "+jhg/Trash"  # Specify location to move deleted messages.
 
 set timeout = 3     # idle time before scanning
 set mail_check = 0  # minimum time between scans
@@ -43,4 +43,4 @@ set realname = "Jared Hall Garst"
 set from = "jhg@fastmail.com"
 set use_from = yes
 
-set smtp_url = smtps://$imap_user:$imap_pass@smtp.fastmail.com
+set smtp_url = smtps://$my_user:$my_pass@smtp.fastmail.com
