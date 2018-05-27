@@ -16,9 +16,9 @@ set mail_check = 0  # minimum time between scans
 set pipe_decode     # strip headers and eval mimes when piping
 
 mailboxes +jhg/INBOX \
-          +jhg/archive \
-          +jhg/sent \
-          +jhg/drafts
+          +jhg/Archive \
+          +jhg/Sent \
+          +jhg/Drafts
 
 
 set sidebar_visible = yes
