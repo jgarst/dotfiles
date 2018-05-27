@@ -6,6 +6,15 @@ set mbox_type = Maildir
 set folder = ~/mail
 set spoolfile = +jhg/INBOX
 
+# Specify where to save and/or look for postponed messages.
+set postponed = "jhg/Drafts"
+set mbox = "jhg/Archive"
+set trash = "+jhg/Trash"
+
+set timeout = 3     # idle time before scanning
+set mail_check = 0  # minimum time between scans
+set pipe_decode     # strip headers and eval mimes when piping
+
 mailboxes +jhg/INBOX \
           +jhg/archive \
           +jhg/sent \
@@ -19,13 +28,6 @@ set status_chars  = " *%A"
 set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
 
 
-# Specify where to save and/or look for postponed messages.
-set postponed = "jhg/Drafts"
-
-set mbox = "jhg/Archive"
-
-# Check for new mail timer in seconds
-set mail_check = 120
 
 # do not duplicate sent saving
 unset record
