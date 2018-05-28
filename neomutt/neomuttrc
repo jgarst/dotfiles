@@ -2,6 +2,7 @@ source vim-keys.rc
 
 set my_user = jhg@fastmail.com
 set my_pass = `pass fastmail/mutt`
+alternates cultofjared@gmail.com|jared.h.garst@gmail.com
 
 set charset = "utf-8"
 set send_charset = "utf-8"
