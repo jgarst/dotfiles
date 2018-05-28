@@ -28,3 +28,9 @@ alias tmux "tmux -f $XDG_CONFIG_HOME/tmux.conf"
 # go path
 set -x GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
+
+function neomutt
+    bash --login -c 'cd; /usr/bin/neomutt' $argv;
+end
+
+alias mutt="neomutt"
