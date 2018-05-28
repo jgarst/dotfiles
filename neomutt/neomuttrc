@@ -27,11 +27,12 @@ mailboxes +jhg/INBOX \
 
 
 set sidebar_visible = yes
-set sidebar_width = 16
+set sidebar_width = 24
 
 set date_format = "%m/%d"
 set status_chars  = " *%A"
 set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 
 set index_format = "[%Z]  %D  %-20.20F  %s"
 
@@ -52,6 +53,12 @@ unset record
 set realname = "Jared Hall Garst"
 set from = "jhg@fastmail.com"
 set use_from = yes
+
+# do not display esoteric headers
+ignore *
+unignore from: to: cc: date: subject:
+unhdr_order *
+hdr_order from: to: cc: date: subject:
 
 set smtp_url = smtps://$my_user:$my_pass@smtp.fastmail.com
 
