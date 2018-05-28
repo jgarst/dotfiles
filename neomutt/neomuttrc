@@ -54,6 +54,10 @@ set realname = "Jared Hall Garst"
 set from = "jhg@fastmail.com"
 set use_from = yes
 
+# use 'p' to postpone and recall messages
+bind compose p postpone-message
+bind index p recall-message
+
 # do not display esoteric headers
 ignore *
 unignore from: to: cc: date: subject:
