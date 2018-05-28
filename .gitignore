@@ -15,6 +15,7 @@
 !NewProject
 !neomutt
 !environment.d
+!pam_environment
 
 # But still
 vim/spell/en.utf-8.add.spl
