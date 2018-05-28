@@ -26,5 +26,5 @@ alias ctags "ctags --options=$XDG_CONFIG_HOME/ctags"
 alias tmux "tmux -f $XDG_CONFIG_HOME/tmux.conf"
 
 # go path
-set -x GOPATH $HOME
+set -x GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
