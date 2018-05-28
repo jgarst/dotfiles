@@ -2,6 +2,11 @@ source vim-keys.rc
 set my_user = jhg@fastmail.com
 set my_pass = `pass fastmail/mutt`
 
+set charset = "utf-8"
+set send_charset = "utf-8"
+
+# don't ask to resume postponed messages
+set recall = no
 
 set mbox_type = Maildir  # Maildir is an alternate mail storage format
 set folder = ~/mail
@@ -22,10 +27,15 @@ mailboxes +jhg/INBOX \
 
 
 set sidebar_visible = yes
-set sidebar_width = 24
+set sidebar_width = 16
 
+set date_format = "%m/%d"
 set status_chars  = " *%A"
 set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
+set index_format = "[%Z]  %D  %-20.20F  %s"
+
+unset confirmappend
 
 # arrow keys to move around folders
 bind index,pager <down>     sidebar-next
@@ -49,3 +59,5 @@ set smtp_url = smtps://$my_user:$my_pass@smtp.fastmail.com
 macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
 macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
 
+# open urls
+macro pager \Cu "|urlscan<enter>" "call urlscan to open links"
