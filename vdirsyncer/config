@@ -1,0 +1,37 @@
+[general]
+status_path = "~/local/share/vdirsyncer"
+
+#CARDDAV
+[pair jhg_contacts]
+a = "jhg_contacts_local"
+b = "jhg_contacts_remote"
+
+collections = ["from a", "from b"]
+
+[storage jhg_contacts_local]
+type = "filesystem"
+path = "~/contacts"
+fileext = ".vcf"
+
+[storage jhg_contacts_remote]
+type = "carddav"
+url = "https://carddav.fastmail.com/"
+username = "jhg@fastmail.com"
+password.fetch = ["command", "pass", "fastmail/vdirsyncer"]
+
+# CALDAV
+[pair jhg_calendar]
+a = "jhg_calendar_local"
+b = "jhg_calendar_remote"
+collections = ["from a", "from b"]
+
+[storage jhg_calendar_local]
+type = "filesystem"
+path = "~/calendar"
+fileext = ".ics"
+
+[storage jhg_calendar_remote]
+type = "caldav"
+url = "https://caldav.fastmail.com/"
+username = "jhg@fastmail.com"
+password.fetch = ["command", "pass", "fastmail/vdirsyncer"]
