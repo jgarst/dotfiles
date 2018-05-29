@@ -11,21 +11,30 @@ set send_charset = "utf-8"
 set recall = no
 
 set mbox_type = Maildir  # Maildir is an alternate mail storage format
-set folder = ~/mail
-set spoolfile = +jhg/INBOX
+set folder = ~/mail/jhg
+set spoolfile = +INBOX
 
 
-set postponed = "+jhg/Drafts"  # Specify location for postponed messages.
-set trash = "+jhg/Trash"  # Specify location to move deleted messages.
+set postponed = "+Drafts"  # Specify location for postponed messages.
+set trash = "+Trash"  # Specify location to move deleted messages.
 
 set timeout = 3     # idle time before scanning
 set mail_check = 0  # minimum time between scans
 set pipe_decode     # strip headers and eval mimes when piping
 
-mailboxes +jhg/INBOX \
-          +jhg/Archive \
-          +jhg/Sent \
-          +jhg/Drafts
+mailboxes +INBOX \
+          +Archive \
+          +Sent \
+          +Drafts
+
+
+set virtual_spoolfile=yes
+virtual-mailboxes "inbox" "notmuch://?query=folder:INBOX"
+virtual-mailboxes "archive" "notmuch://?query=folder:Archive"
+virtual-mailboxes "drafts" "notmuch://?query=folder:Drafts"
+virtual-mailboxes "sent" "notmuch://?query=folder:Sent"
+virtual-mailboxes "spam" "notmuch://?query=folder:Spam"
+virtual-mailboxes "trash" "notmuch://?query=folder:Trash"
 
 
 set sidebar_visible = yes
@@ -51,8 +60,8 @@ set sleep_time = 0
 set mark_old = yes  # do not mark emails as old on exit
 
 
-# do not duplicate sent saving
-unset record
+# do not duplicate sent saving?
+set record = "+Sent"
 
 set realname = "Jared Hall Garst"
 set from = "jhg@fastmail.com"
