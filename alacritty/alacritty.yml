@@ -20,9 +20,10 @@ window.dimensions:
 
 # The FreeType rasterizer needs to know the device DPI for best results
 # (changes require restart)
-dpi:
-  x: 96.0
-  y: 96.0
+# These seem to be ignored?
+#dpi:
+#  x: 168.0
+#  y: 168.0
 
 # Display tabs using this many cells (changes require restart)
 tabspaces: 4
@@ -51,7 +52,7 @@ font:
     # style: Italic
 
   # Point size of the font
-  size: 13.0
+  size: 8.0
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
