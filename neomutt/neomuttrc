@@ -1,40 +1,58 @@
-source vim-keys.rc
-set mailcap_path = ~/config/neomutt/mailcap
-
-# jump to w3m (or whatever is defined in mailcap) for html emails
-auto_view text/html
-# use text encoding first
-alternative_order text/plain text/html
-
+###############################################################################
+## Servers, Accounts and Identifiers
+###############################################################################
 set my_user = jhg@fastmail.com
 set my_pass = `pass fastmail/mutt`
 alternates cultofjared@gmail.com|jared.h.garst@gmail.com
 
-set charset = "utf-8"
-set send_charset = "utf-8"
+set realname = "Jared Hall Garst"
+set from = "jhg@fastmail.com"
+set use_from = yes
 
-# don't ask to resume postponed messages
-set recall = no
+set smtp_url = smtps://$my_user:$my_pass@smtp.fastmail.com
 
-set mbox_type = Maildir  # Maildir is an alternate mail storage format
+
+###############################################################################
+## Paths, Settings
+###############################################################################
+
+set mbox_type = Maildir  # One file per mail format.
 set folder = ~/mail/jhg
 set spoolfile = +INBOX
 
 
-set postponed = "+Drafts"  # Specify location for postponed messages.
-set trash = "+Trash"  # Specify location to move deleted messages.
+###############################################################################
+## Behavior
+###############################################################################
 
-set timeout = 3     # idle time before scanning
-set mail_check = 0  # minimum time between scans
-set pipe_decode     # strip headers and eval mimes when piping
+set timeout = 3       # Idle time before scanning.
+set mail_check = 0    # Minimum time between scans.
+set pipe_decode       # Strip headers and eval mimes when piping.
 
-mailboxes +INBOX \
-          +Archive \
-          +Sent \
-          +Drafts
+unset confirmappend   # Do not ask to add to mailbox.
+
+set sleep_time = 0    # Faster folder switch.
+
+set mark_old = yes    # Do not mark emails as old on exit.
+
+set record = "+Sent"  # Location for sent messages.
+set trash = "+Trash"  # Location for deleted messages.
 
 
-set virtual_spoolfile=yes
+###############################################################################
+## Attachments
+###############################################################################
+
+set mailcap_path = ~/config/neomutt/mailcap  # Open attachments.
+auto_view text/html  # For html emails, jump to browser defined in mailcap.
+
+
+###############################################################################
+## Mailboxes
+###############################################################################
+
+# Mailbox defined as notmuch query.
+set virtual_spoolfile = yes
 virtual-mailboxes "inbox" "notmuch://?query=folder:INBOX"
 virtual-mailboxes "archive" "notmuch://?query=folder:Archive"
 virtual-mailboxes "drafts" "notmuch://?query=folder:Drafts"
@@ -43,54 +61,66 @@ virtual-mailboxes "spam" "notmuch://?query=folder:Spam"
 virtual-mailboxes "trash" "notmuch://?query=folder:Trash"
 
 
-set sidebar_visible = yes
-set sidebar_width = 24
+###############################################################################
+## Drafts
+###############################################################################
 
-set date_format = "%m/%d"
-set status_chars  = " *%A"
-set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
-set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set postponed = "+Drafts"  # Location for postponed messages.
 
-set index_format = "[%Z]  %D  %-20.20F  %s"
+# 'p' to postpone and recall messages.
+bind compose p postpone-message
+bind index p recall-message
 
-unset confirmappend
 
-# arrow keys to move around folders
+set recall = no            # Do not ask to resume postponed messages.
+
+
+###############################################################################
+## Navigation and Hotkeys
+###############################################################################
+
+source vim-keys.rc
+
+# Arrow keys to move around folders.
+# These are bad keys, but switching mailboxes is uncommon for me.
 bind index,pager <down>     sidebar-next
 bind index,pager <up>       sidebar-prev
 bind index,pager <right>    sidebar-open
 
-# Faster folder switch
-set sleep_time = 0
+# copy/move dialogs.
+macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
+macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
 
-set mark_old = yes  # do not mark emails as old on exit
+# TODO: open urls
+# disabled because urlscan is hard to read, not immediately configurable
+# would like to combine this functionality with the browser anyway
+# macro pager \Cu "|urlscan<enter>" "call urlscan to open links"
+
+# Fetch mail with offlineimap.
+macro index o "<shell-escape>offlineimap<enter>" "run offlineimap to sync inbox"
 
 
-# do not duplicate sent saving?
-set record = "+Sent"
+###############################################################################
+## Beautification
+###############################################################################
 
-set realname = "Jared Hall Garst"
-set from = "jhg@fastmail.com"
-set use_from = yes
+# Status Bar.
+set status_chars  = " *%A"
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
 
-# use 'p' to postpone and recall messages
-bind compose p postpone-message
-bind index p recall-message
+# Side Bar.
+set sidebar_visible = yes
+set sidebar_width = 24
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set date_format = "%m/%d"
+set index_format = "[%Z]  %D  %-20.20F  %s"
 
-# do not display esoteric headers
+# Do not display esoteric headers.
 ignore *
 unignore from: to: cc: date: subject:
 unhdr_order *
 hdr_order from: to: cc: date: subject:
 
-set smtp_url = smtps://$my_user:$my_pass@smtp.fastmail.com
-
-# copy/move dialogs
-macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
-macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
-
-# open urls
-macro pager \Cu "|urlscan<enter>" "call urlscan to open links"
-
-# manually fetch mail with offlineimap
-macro index o "<shell-escape>offlineimap<enter>" "run offlineimap to sync inbox"
+# No really, UTF-8.
+set charset = "utf-8"
+set send_charset = "utf-8"
