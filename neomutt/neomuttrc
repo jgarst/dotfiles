@@ -92,4 +92,5 @@ macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
 # open urls
 macro pager \Cu "|urlscan<enter>" "call urlscan to open links"
 
-
+# manually fetch mail with offlineimap
+macro index o "<shell-escape>offlineimap<enter>" "run offlineimap to sync inbox"
