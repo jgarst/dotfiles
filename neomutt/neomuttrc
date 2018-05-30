@@ -1,4 +1,10 @@
 source vim-keys.rc
+set mailcap_path = ~/config/neomutt/mailcap
+
+# jump to w3m (or whatever is defined in mailcap) for html emails
+auto_view text/html
+# use text encoding first
+alternative_order text/plain text/html
 
 set my_user = jhg@fastmail.com
 set my_pass = `pass fastmail/mutt`
