@@ -11,4 +11,6 @@ EDITOR=vim
 GOPATH DEFAULT=@{HOME}/go
 BROWSER=chromium
 
+PYTHONPATH DEFAULT=@{HOME}/lib/python
+
 NOTMUCH_CONFIG DEFAULT=@{HOME}/config/notmuch-config
