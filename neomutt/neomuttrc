@@ -27,7 +27,9 @@ set spoolfile = +INBOX
 
 set timeout = 3       # Idle time before scanning.
 set mail_check = 0    # Minimum time between scans.
-set pipe_decode       # Strip headers and eval mimes when piping.
+
+# this interferes with viewhtmlmsg, which might bear replacing anyway
+#set pipe_decode       # Strip headers and eval mimes when piping.
 
 unset confirmappend   # Do not ask to add to mailbox.
 
@@ -91,6 +93,8 @@ bind index,pager <right>    sidebar-open
 macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
 macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
 
+# External browser.
+macro pager H "<pipe-message>viewhtmlmsg<enter>" "display a message in browser"
 # TODO: open urls
 # disabled because urlscan is hard to read, not immediately configurable
 # would like to combine this functionality with the browser anyway
