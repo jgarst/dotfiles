@@ -90,8 +90,8 @@ bind index,pager <up>       sidebar-prev
 bind index,pager <right>    sidebar-open
 
 # copy/move dialogs.
-macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
-macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+macro index C "<copy-message>?<change-vfolder>" "copy a message to a mailbox"
+macro index M "<save-message>?<change-vfolder>" "move a message to a mailbox"
 
 # External browser.
 macro pager H "<pipe-message>viewhtmlmsg<enter>" "display a message in browser"
