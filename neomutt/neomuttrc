@@ -39,6 +39,7 @@ set mark_old = yes    # Do not mark emails as old on exit.
 
 set record = "+Sent"  # Location for sent messages.
 set trash = "+Trash"  # Location for deleted messages.
+set delete=yes        # Do not confirm deletes
 
 
 ###############################################################################
