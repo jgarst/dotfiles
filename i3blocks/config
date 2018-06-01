@@ -24,7 +24,7 @@
 #
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
-command=/usr/lib/i3blocks/$BLOCK_NAME
+command=$XDG_CONFIG_HOME/i3blocks/scripts/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
@@ -88,8 +88,7 @@ color=#b8bb26
 #
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
-[cpu_usage]
-command=$XDG_CONFIG_HOME/i3blocks/scripts/cpu_usage.py
+[cpu_usage.py]
 label=CPU
 interval=10
 #separator=false
