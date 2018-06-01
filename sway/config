@@ -228,9 +228,13 @@ bindsym $mod+p exec env PASSWORD_STORE_DIR=$HOME/pass passmenu
 
 include /etc/sway/config.d/*
 
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
-bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% \
+    && pkill -SIGRTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% \
+    && pkill -SIGRTMIN+10 i3blocks
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle \
+    && pkill -SIGRTMIN+10 i3blocks
+
 bindsym XF86MonBrightnessDown exec light -U 5
 bindsym XF86MonBrightnessUp exec light -A 5
 
