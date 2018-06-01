@@ -23,4 +23,4 @@ with Popen(['pamixer', '--get-mute']
 if MUTE == 'true':
     print(f'({VOLUME})')
 else:
-    print(str(VOLUME))
+    print(f' {VOLUME} ')

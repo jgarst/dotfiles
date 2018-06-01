@@ -28,16 +28,12 @@ command=$XDG_CONFIG_HOME/i3blocks/scripts/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
-# Volume indicator
-#
-# The first parameter sets the step (and units to display)
-# The second parameter overrides the mixer selection
-# See the script for details.
 [volume.py]
 label=VOL
 instance=Master
 interval=60
 signal=10
+min_width=VOL (100)
 
 # Memory usage
 #
