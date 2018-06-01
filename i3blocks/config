@@ -89,10 +89,9 @@ color=#b8bb26
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
 [cpu_usage]
-command=$XDG_CONFIG_HOME/i3blocks/scripts/cpu_usage -d 0
+command=$XDG_CONFIG_HOME/i3blocks/scripts/cpu_usage.py
 label=CPU
 interval=10
-min_width=CPU 100%
 #separator=false
 
 #[load_average]
