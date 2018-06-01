@@ -196,7 +196,8 @@ bindsym $mod+r mode "resize"
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     position top
-    status_command i3status -c $XDG_CONFIG_HOME/i3/i3status.conf
+    status_command i3blocks
+    #status_command i3status -c $XDG_CONFIG_HOME/i3/i3status.conf
     colors {
         statusline #ffffff
         background #323232
