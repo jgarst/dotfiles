@@ -28,6 +28,30 @@ command=$XDG_CONFIG_HOME/i3blocks/scripts/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
+# Key indicators
+#
+# Add the following bindings to i3 config file:
+#
+# bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
+# bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
+[keyindicator]
+instance=CAPS
+interval=once
+signal=11
+
+[keyindicator]
+instance=NUM
+interval=once
+signal=11
+
+[todo.py]
+label=TODO
+interval=60
+
+[anki.py]
+label=ANKI
+interval=60
+
 [mail]
 label=MAIL
 min_width=MAIL 999
