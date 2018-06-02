@@ -28,6 +28,11 @@ command=$XDG_CONFIG_HOME/i3blocks/scripts/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
+[mail]
+label=MAIL
+min_width=MAIL 999
+interval=60
+
 [volume.py]
 label=VOL
 instance=Master
