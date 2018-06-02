@@ -62,9 +62,10 @@ interval=30
 interval=10
 separator=false
 
-[wifi]
+[wifi.py]
 instance=wlp58s0
 interval=10
+min_width=100%
 
 [cpu_usage.py]
 label=CPU
