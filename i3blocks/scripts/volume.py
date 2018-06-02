@@ -21,6 +21,6 @@ with Popen(['pamixer', '--get-mute']
     MUTE = MUTE.rstrip()
 
 if MUTE == 'true':
-    print(f'({VOLUME})')
+    print(f'({VOLUME:3d})')
 else:
-    print(f' {VOLUME} ')
+    print(f' {VOLUME:3d} ')
