@@ -9,7 +9,7 @@ CMD = ['mpstat'
       ,'-o', 'JSON'  # output JSON
       ,'-P', 'ALL'   # stats for each cpu
       ,'1'           # average over 1 second
-      , '1'            # run once
+      ,'1'           # run once
       ]
 
 with Popen(CMD, stdout=PIPE) as mpstat:
