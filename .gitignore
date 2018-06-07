@@ -19,6 +19,7 @@
 !pam_environment
 !vdirsyncer/
 !notmuch-config
+!systemd/
 
 
 # But still

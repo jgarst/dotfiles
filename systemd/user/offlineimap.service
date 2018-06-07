@@ -1,0 +1,12 @@
+[Unit]
+Description=Offlineimap Service
+Documentation=man:offlineimap(1)
+
+[Service]
+ExecStart=/usr/bin/offlineimap -u basic
+Restart=on-failure
+RestartSec=60
+WatchdogSec=300
+
+[Install]
+WantedBy=default.target
