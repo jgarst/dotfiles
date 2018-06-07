@@ -20,6 +20,7 @@
 !vdirsyncer/
 !notmuch-config
 !systemd/
+!offlineimap
 
 
 # But still
