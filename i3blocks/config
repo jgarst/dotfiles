@@ -48,7 +48,8 @@ signal=11
 label=TODO
 interval=60
 
-[anki.py]
+[ankicount]
+command=ankicount --width 2
 label=ANKI
 interval=60
 
