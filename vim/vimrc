@@ -90,5 +90,8 @@ let g:ale_python_mypy_options = '--ignore-missing-imports'
 set shell=/usr/bin/bash
 let $BASH_ENV = "$XDG_CONFIG_HOME/bash_aliases"
 
+" w!! overwrites write protected file
+command W execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
+
 " textwidth of 72 for mutt emails
 au BufRead /tmp/mutt-* set tw=72
