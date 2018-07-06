@@ -21,6 +21,7 @@
 !notmuch-config
 !systemd/
 !offlineimap
+!checklist
 
 
 # But still
