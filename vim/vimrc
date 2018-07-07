@@ -5,6 +5,10 @@ set nocompatible
 set nobackup
 set nowritebackup
 
+" Don't use swap files, autoreload when file has changed on disk
+set noswapfile
+set autoread
+
 " file locations
 set directory=$XDG_CACHE_HOME/vim,~/,/tmp
 set backupdir=$XDG_CACHE_HOME/vim,~/,/tmp

@@ -14,7 +14,6 @@ aur = [
     "vim-gruvbox-git",
     "vim-multiple-cursors-git",
     "vim-neomutt-git",
-    "vim-recover-git",  # Provides diff of a lingering swap file
     "vim-toml-git",     # Provides syntax highlighting for toml
 ]
 
