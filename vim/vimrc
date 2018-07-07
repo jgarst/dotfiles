@@ -1,6 +1,10 @@
 " moving vimrc enables vi compatibility. Disable it here.
 set nocompatible
 
+" Don't make backups
+set nobackup
+set nowritebackup
+
 " file locations
 set directory=$XDG_CACHE_HOME/vim,~/,/tmp
 set backupdir=$XDG_CACHE_HOME/vim,~/,/tmp
