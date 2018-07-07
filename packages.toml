@@ -1,0 +1,22 @@
+# An imcomplete list of manually installed packages
+
+# Tables may contain duplicate packages
+
+[vim]
+package = [
+    "gvim",  # gvim package contains vim with copy-paste support 
+    "vim-ale",
+    "vim-systemd",
+]
+
+aur = [
+    "vim-go",
+    "vim-gruvbox-git",
+    "vim-multiple-cursors-git",
+    "vim-neomutt-git",
+    "vim-recover-git",  # Provides diff of a lingering swap file
+    "vim-toml-git",     # Provides syntax highlighting for toml
+]
+
+[linters]
+other = ["github.com/BurntSushi/toml/cmd/tomlv"]

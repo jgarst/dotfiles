@@ -22,6 +22,7 @@
 !systemd/
 !offlineimap
 !checklist
+!packages.toml
 
 
 # But still
