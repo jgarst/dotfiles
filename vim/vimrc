@@ -39,6 +39,10 @@ set number
 filetype plugin on
 syntax on
 
+" search settings
+set showmatch  " live match highlighting
+set hlsearch  " highlight searches
+
 " set tabs to 4 spaces
 set tabstop=4
 set shiftwidth=4
@@ -81,9 +85,6 @@ augroup resCur
     autocmd!
     autocmd BufReadPost * call setpos(".", getpos("'\""))
 augroup END
-
-" highlight searches
-set hlsearch
 
 " Netrw supports reading and writing across networks. Disable it.
 let g:netrw_dirhistmax = 0
