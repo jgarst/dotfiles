@@ -35,6 +35,16 @@ endfun
 set relativenumber
 set number
 
+" Status Line
+set laststatus=2
+set statusline=%<                    " truncate at beginning
+set statusline+=%f                   " filename
+set statusline+=\ (%{&ft})           " filetype
+set statusline+=\ %-4(%m%)           " modified status, padded to 4 on the left
+set statusline+=%=                   " right justify after splitter
+set statusline+=%-19(%3l,%02c%03V%)  " line number, row, row with expanded tabs
+
+
 " syntax highlighting
 filetype plugin on
 syntax on
