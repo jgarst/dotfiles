@@ -16,7 +16,7 @@
 	tool = vimdiff
 	conflictstyle = diff3
 [core]
-	editor = vim 
+	editor = nvim 
 [rebase]
 	autosquash = true
 [mergetool]

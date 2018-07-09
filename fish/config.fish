@@ -13,6 +13,7 @@ alias print "lpr"
 alias ctags "ctags --options=$XDG_CONFIG_HOME/ctags"
 
 alias tmux "tmux -f $XDG_CONFIG_HOME/tmux.conf"
+alias vim "nvim"
 
 # go path
 set -gx PATH $GOPATH/bin $PATH

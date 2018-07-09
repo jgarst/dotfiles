@@ -4,7 +4,8 @@
 
 [vim]
 package = [
-    "gvim",  # gvim package contains vim with copy-paste support 
+    "vim",  # erroneous dependency
+    "neovim",
     "vim-ale",
     "vim-systemd",
 ]
