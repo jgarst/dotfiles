@@ -1,13 +1,21 @@
 " moving vimrc enables vi compatibility. Disable it here.
 set nocompatible
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Filesystem
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Don't make backups
 set nobackup
 set nowritebackup
 
+" Persistent undo
+set undofile
+set undodir=$XDG_CACHE_HOME/vim/undo
+
 " Don't use swap files, autoreload when file has changed on disk
 set noswapfile
 set autoread
+au BufEnter,FocusGained * checktime
 
 " file locations
 set directory=$XDG_CACHE_HOME/vim,~/,/tmp
