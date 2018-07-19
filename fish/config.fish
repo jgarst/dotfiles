@@ -23,3 +23,10 @@ function neomutt
 end
 
 alias mutt="neomutt"
+
+# Shift-enter completes the fish suggestion
+function fish_user_key_bindings
+    for mode in insert default visual
+        bind -M $mode \e\[13\;2u accept-autosuggestion execute
+    end
+end
