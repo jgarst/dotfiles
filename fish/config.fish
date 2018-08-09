@@ -30,3 +30,8 @@ function fish_user_key_bindings
         bind -M $mode \e\[13\;2u accept-autosuggestion execute
     end
 end
+
+# Use conda 
+set -gx PATH /opt/miniconda3/bin/ $PATH
+source /opt/miniconda3/etc/fish/conf.d/conda.fish
+conda activate root
