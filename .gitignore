@@ -2,6 +2,7 @@
 /*
 
 # Except
+!README.md
 !fish/
 !alacritty/
 !vim/
@@ -24,6 +25,7 @@
 !checklist
 !packages.toml
 !pikaur.conf
+!personal.map
 
 
 # But still
