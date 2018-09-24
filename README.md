@@ -9,3 +9,14 @@ Console keyboard layout
 The personal.map file describes a keyboard layout where Caps Lock is bound to Escape.
 It is loaded in the `/etc/vconsole.conf` file, which can be set with `localectl set-keymap --no-convert personal`.
 This does not change the key map in Wayland or X11.
+
+
+Filesystems
+-----------
+- hidepid=2 
+
+    hidepid prevents processies from looking at information they don't need.
+    In fstab, replace the proc line with
+    ```
+    proc	/proc	proc	nosuid,nodev,noexec,hidepid=2,gid=proc	0	0
+    ```
