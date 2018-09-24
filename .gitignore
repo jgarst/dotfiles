@@ -3,6 +3,7 @@
 
 # Except
 !README.md
+!bin/
 !fish/
 !alacritty/
 !vim/
