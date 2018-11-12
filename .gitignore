@@ -27,6 +27,7 @@
 !packages.toml
 !pikaur.conf
 !personal.map
+!X11
 
 
 # But still
