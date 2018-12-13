@@ -67,21 +67,12 @@ font:
 # Should display the render timer
 render_timer: false
 
-# Use custom cursor colors. If true, display the cursor in the cursor.foreground
-# and cursor.background colors, otherwise invert the colors of the cursor.
-custom_cursor_colors: false
-
 # Colors (Gruvbox light)
 colors:
   # Default colors
   primary:
     background: '0xfbf1c7' 
     foreground: '0x3c3836' 
-
-  # Colors the cursor will use if `custom_cursor_colors` is true
-  cursor:
-    text: '0x000000'
-    cursor: '0xffffff'
 
   # Normal colors
   normal:
@@ -213,10 +204,7 @@ key_bindings:
   - { key: Delete,                  chars: "\x1b[P",   mode: ~AppKeypad  }
   - { key: Return,   mods: Shift,   chars: "\x1b[13;2u"                  }
   - { key: Return,   mods: Control, chars: "\x1b[13;5u"                  }
-  - { key: PageUp,   mods: Shift,   action: ScrollPageUp   }
-  - { key: PageDown, mods: Shift,   action: ScrollPageDown }
-  - { key: End,      mods: Shift,   action: ScrollToBottom }
-  - { key: Home,     mods: Shift,   action: ScrollToTop    }
+
 # Mouse bindings
 #
 # Currently doesn't support modifiers. Both the `mouse` and `action` fields must
@@ -242,7 +230,7 @@ mouse:
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
 
-hide_cursor_when_typing: false
+mouse.hide_when_typing: false
 
 # Shell
 #
