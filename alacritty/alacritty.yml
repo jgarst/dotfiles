@@ -1,16 +1,15 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator
 
-
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty it self.
 # env:
-  # TERM env customization. Default is xterm-256color
-  # Note: the default TERM value `xterm-256color` does not
-  # specify all features alacritty supports. This does pose
-  # a few issues with programs relying on terminfo and the
-  # `tput` command
-  # TERM: xterm-256color
+# TERM env customization. Default is xterm-256color
+# Note: the default TERM value `xterm-256color` does not
+# specify all features alacritty supports. This does pose
+# a few issues with programs relying on terminfo and the
+# `tput` command
+# TERM: xterm-256color
 
 # Window dimensions in character columns and lines
 # (changes require restart)
@@ -65,37 +64,37 @@ font:
   use_thin_strokes: true
 
 debug:
-    # Display the time it takes to redraw each frame.
-    render_timer: false
+  # Display the time it takes to redraw each frame.
+  render_timer: false
 
 # Colors (Gruvbox light)
 colors:
   # Default colors
   primary:
-    background: '0xfbf1c7' 
-    foreground: '0x3c3836' 
+    background: "0xfbf1c7"
+    foreground: "0x3c3836"
 
   # Normal colors
   normal:
-    black:   '0xfbf1c7' 
-    red:     '0xcc241d' 
-    green:   '0x98971a' 
-    yellow:  '0xd79921'
-    blue:    '0x458588'
-    magenta: '0xb16286'
-    cyan:    '0x689d6a'
-    white:   '0x7c6f64'
+    black: "0xfbf1c7"
+    red: "0xcc241d"
+    green: "0x98971a"
+    yellow: "0xd79921"
+    blue: "0x458588"
+    magenta: "0xb16286"
+    cyan: "0x689d6a"
+    white: "0x7c6f64"
 
   # Bright colors
   bright:
-    black:   '0x928374'
-    red:     '0x9d0006'
-    green:   '0x79740e'
-    yellow:  '0xb57614'
-    blue:    '0x076678'
-    magenta: '0x8f3f71'
-    cyan:    '0x427b58'
-    white:   '0x3c3836'
+    black: "0x928374"
+    red: "0x9d0006"
+    green: "0x79740e"
+    yellow: "0xb57614"
+    blue: "0x076678"
+    magenta: "0x8f3f71"
+    cyan: "0x427b58"
+    white: "0x3c3836"
 
 # Visual Bell
 #
@@ -156,55 +155,55 @@ visual_bell:
 # (e.g. "\x1b[5~") is? Open another terminal (like xterm) without tmux,
 # then run `showkey -a` to get the sequence associated to a key combination.
 key_bindings:
-  - { key: V,       mods: Control|Shift,    action: Paste                }
-  - { key: C,       mods: Control|Shift,    action: Copy                 }
-  - { key: Insert,  mods: Shift,    action: PasteSelection               }
-  - { key: Home,                    chars: "\x1bOH",   mode: AppCursor   }
-  - { key: Home,                    chars: "\x1b[1~",  mode: ~AppCursor  }
-  - { key: End,                     chars: "\x1bOF",   mode: AppCursor   }
-  - { key: End,                     chars: "\x1b[4~",  mode: ~AppCursor  }
-  - { key: PageUp,                  chars: "\x1b[5~"                     }
-  - { key: PageDown,                chars: "\x1b[6~"                     }
-  - { key: Left,     mods: Shift,   chars: "\x1b[1;2D"                   }
-  - { key: Left,     mods: Control, chars: "\x1b[1;5D"                   }
-  - { key: Left,     mods: Alt,     chars: "\x1b[1;3D"                   }
-  - { key: Left,                    chars: "\x1b[D",   mode: ~AppCursor  }
-  - { key: Left,                    chars: "\x1bOD",   mode: AppCursor   }
-  - { key: Right,    mods: Shift,   chars: "\x1b[1;2C"                   }
-  - { key: Right,    mods: Control, chars: "\x1b[1;5C"                   }
-  - { key: Right,    mods: Alt,     chars: "\x1b[1;3C"                   }
-  - { key: Right,                   chars: "\x1b[C",   mode: ~AppCursor  }
-  - { key: Right,                   chars: "\x1bOC",   mode: AppCursor   }
-  - { key: Up,       mods: Shift,   chars: "\x1b[1;2A"                   }
-  - { key: Up,       mods: Control, chars: "\x1b[1;5A"                   }
-  - { key: Up,       mods: Alt,     chars: "\x1b[1;3A"                   }
-  - { key: Up,                      chars: "\x1b[A",   mode: ~AppCursor  }
-  - { key: Up,                      chars: "\x1bOA",   mode: AppCursor   }
-  - { key: Down,     mods: Shift,   chars: "\x1b[1;2B"                   }
-  - { key: Down,     mods: Control, chars: "\x1b[1;5B"                   }
-  - { key: Down,     mods: Alt,     chars: "\x1b[1;3B"                   }
-  - { key: Down,                    chars: "\x1b[B",   mode: ~AppCursor  }
-  - { key: Down,                    chars: "\x1bOB",   mode: AppCursor   }
-  - { key: Tab,      mods: Shift,   chars: "\x1b[Z"                      }
-  - { key: F1,                      chars: "\x1bOP"                      }
-  - { key: F2,                      chars: "\x1bOQ"                      }
-  - { key: F3,                      chars: "\x1bOR"                      }
-  - { key: F4,                      chars: "\x1bOS"                      }
-  - { key: F5,                      chars: "\x1b[15~"                    }
-  - { key: F6,                      chars: "\x1b[17~"                    }
-  - { key: F7,                      chars: "\x1b[18~"                    }
-  - { key: F8,                      chars: "\x1b[19~"                    }
-  - { key: F9,                      chars: "\x1b[20~"                    }
-  - { key: F10,                     chars: "\x1b[21~"                    }
-  - { key: F11,                     chars: "\x1b[23~"                    }
-  - { key: F12,                     chars: "\x1b[24~"                    }
-  - { key: Back,                    chars: "\x7f"                        }
-  - { key: Back,     mods: Alt,     chars: "\x1b\x7f"                    }
-  - { key: Insert,                  chars: "\x1b[2~"                     }
-  - { key: Delete,                  chars: "\x1b[3~",  mode: AppKeypad   }
-  - { key: Delete,                  chars: "\x1b[P",   mode: ~AppKeypad  }
-  - { key: Return,   mods: Shift,   chars: "\x1b[13;2u"                  }
-  - { key: Return,   mods: Control, chars: "\x1b[13;5u"                  }
+  - { key: V, mods: Control|Shift, action: Paste }
+  - { key: C, mods: Control|Shift, action: Copy }
+  - { key: Insert, mods: Shift, action: PasteSelection }
+  - { key: Home, chars: "\x1bOH", mode: AppCursor }
+  - { key: Home, chars: "\x1b[1~", mode: ~AppCursor }
+  - { key: End, chars: "\x1bOF", mode: AppCursor }
+  - { key: End, chars: "\x1b[4~", mode: ~AppCursor }
+  - { key: PageUp, chars: "\x1b[5~" }
+  - { key: PageDown, chars: "\x1b[6~" }
+  - { key: Left, mods: Shift, chars: "\x1b[1;2D" }
+  - { key: Left, mods: Control, chars: "\x1b[1;5D" }
+  - { key: Left, mods: Alt, chars: "\x1b[1;3D" }
+  - { key: Left, chars: "\x1b[D", mode: ~AppCursor }
+  - { key: Left, chars: "\x1bOD", mode: AppCursor }
+  - { key: Right, mods: Shift, chars: "\x1b[1;2C" }
+  - { key: Right, mods: Control, chars: "\x1b[1;5C" }
+  - { key: Right, mods: Alt, chars: "\x1b[1;3C" }
+  - { key: Right, chars: "\x1b[C", mode: ~AppCursor }
+  - { key: Right, chars: "\x1bOC", mode: AppCursor }
+  - { key: Up, mods: Shift, chars: "\x1b[1;2A" }
+  - { key: Up, mods: Control, chars: "\x1b[1;5A" }
+  - { key: Up, mods: Alt, chars: "\x1b[1;3A" }
+  - { key: Up, chars: "\x1b[A", mode: ~AppCursor }
+  - { key: Up, chars: "\x1bOA", mode: AppCursor }
+  - { key: Down, mods: Shift, chars: "\x1b[1;2B" }
+  - { key: Down, mods: Control, chars: "\x1b[1;5B" }
+  - { key: Down, mods: Alt, chars: "\x1b[1;3B" }
+  - { key: Down, chars: "\x1b[B", mode: ~AppCursor }
+  - { key: Down, chars: "\x1bOB", mode: AppCursor }
+  - { key: Tab, mods: Shift, chars: "\x1b[Z" }
+  - { key: F1, chars: "\x1bOP" }
+  - { key: F2, chars: "\x1bOQ" }
+  - { key: F3, chars: "\x1bOR" }
+  - { key: F4, chars: "\x1bOS" }
+  - { key: F5, chars: "\x1b[15~" }
+  - { key: F6, chars: "\x1b[17~" }
+  - { key: F7, chars: "\x1b[18~" }
+  - { key: F8, chars: "\x1b[19~" }
+  - { key: F9, chars: "\x1b[20~" }
+  - { key: F10, chars: "\x1b[21~" }
+  - { key: F11, chars: "\x1b[23~" }
+  - { key: F12, chars: "\x1b[24~" }
+  - { key: Back, chars: "\x7f" }
+  - { key: Back, mods: Alt, chars: "\x1b\x7f" }
+  - { key: Insert, chars: "\x1b[2~" }
+  - { key: Delete, chars: "\x1b[3~", mode: AppKeypad }
+  - { key: Delete, chars: "\x1b[P", mode: ~AppKeypad }
+  - { key: Return, mods: Shift, chars: "\x1b[13;2u" }
+  - { key: Return, mods: Control, chars: "\x1b[13;5u" }
 
 # Mouse bindings
 #
@@ -229,7 +228,7 @@ mouse:
   triple_click: { threshold: 300 }
 
 selection:
-  semantic_escape_chars: ",│`|:\"' ()[]{}<>"
+  semantic_escape_chars: ',│`|:"'' ()[]{}<>'
 
 mouse.hide_when_typing: false
 
@@ -238,6 +237,6 @@ mouse.hide_when_typing: false
 # You can set shell.program to the path of your favorite shell, e.g. /bin/fish.
 # Entries in shell.args are passed unmodified as arguments to the shell.
 shell:
-    program: /bin/fish
+  program: /bin/fish
 #  args:
 #    - --login
