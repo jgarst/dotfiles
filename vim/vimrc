@@ -39,6 +39,8 @@ fun! TrimWhitespace()
     call winrestview(l:save)
 endfun
 
+let g:ale_fix_on_save = 1
+
 " line numbers
 set relativenumber
 set number
