@@ -14,6 +14,7 @@ alias ctags "ctags --options=$XDG_CONFIG_HOME/ctags"
 
 alias tmux "tmux -f $XDG_CONFIG_HOME/tmux.conf"
 alias vim "nvim"
+alias vi "nvim"
 
 # go path
 set -gx PATH $GOPATH/bin $PATH
