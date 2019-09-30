@@ -98,6 +98,10 @@ augroup END
 " Netrw supports reading and writing across networks. Disable it.
 let g:netrw_dirhistmax = 0
 
+" bind Ctrl-j and Ctrl-k to previous and next error
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
 " ALE sign gutter popping in and out is too much movement
 let g:ale_sign_column_always = 1
 
