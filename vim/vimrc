@@ -124,7 +124,4 @@ command W execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 " textwidth of 72 for mutt emails
 au BufRead /tmp/mutt-* set tw=72
 
-" allow for local overrides
-if filereadable(expand("~/.vimrc.local"))
-    source ~/.vimrc.local
-endif
+set secure
