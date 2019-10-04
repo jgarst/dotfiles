@@ -108,6 +108,12 @@ let g:ale_sign_column_always = 1
 " do not complain about missing stub files
 let g:ale_python_mypy_options = '--ignore-missing-imports'
 
+let g:ale_fixers = {
+    \ 'sql': ['pgformatter'],
+    \ }
+
+let g:ale_sql_pgformatter_options = '-w 80'
+
 " Use bash for shell commands
 set shell=/usr/bin/bash
 let $BASH_ENV = "$XDG_CONFIG_HOME/bash_aliases"
