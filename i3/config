@@ -165,4 +165,5 @@ bindsym XF86AudioPrev exec xmms2 prev
 # should this correspond to external displays?
 # bindsym $mod+p exec xmms2 toggle
 
-
+# Bind Print function to deepin-screenshot
+bindsym Print exec deepin-screenshot
