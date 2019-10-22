@@ -53,11 +53,6 @@ syntax on
 set showmatch  " live match highlighting
 set hlsearch  " highlight searches
 
-" set tabs to 4 spaces
-set tabstop=4
-set shiftwidth=4
-set expandtab
-
 " tab, trailing white space, non breaking space, end of line, line continuation
 set list listchars=tab:│\ ,trail:·,nbsp:·,eol:¬,precedes:«,extends:»
 
@@ -80,11 +75,6 @@ syn match AcronymNoSpell '\<\(\u\|\d\)\{2,}s\?\>' contains=@NoSpell
 
 " do not complain about lower case in git commits
 autocmd FileType gitcommit setlocal spellcapcheck=
-
-" python
-" 80 char ruler
-autocmd Filetype python set colorcolumn=80
-" trim trailing whitespace
 
 " have yanking use system clipboard
 set clipboard=unnamedplus
