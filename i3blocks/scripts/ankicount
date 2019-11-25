@@ -30,9 +30,12 @@ if __name__ == '__main__':
     )
     SELECT COUNT(*) FROM cards
     WHERE
-        type == 0
-        OR (type == 1 AND due <= strftime('%s', 'now'))
-        OR (type == 2 AND due <= (SELECT offset + ? FROM today))
+        queue == 0
+        AND (
+          type == 0
+          OR (type == 1 AND due <= strftime('%s', 'now'))
+          OR (type == 2 AND due <= (SELECT offset + ? FROM today))
+        )
     ;
     '''
 
