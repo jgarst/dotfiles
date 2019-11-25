@@ -30,7 +30,7 @@ if __name__ == '__main__':
     )
     SELECT COUNT(*) FROM cards
     WHERE
-        queue == 0
+        queue == type
         AND (
           type == 0
           OR (type == 1 AND due <= strftime('%s', 'now'))
