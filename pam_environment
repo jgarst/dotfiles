@@ -1,21 +1,27 @@
-XDG_CONFIG_HOME DEFAULT=@{HOME}/config
-XDG_DATA_HOME DEFAULT=@{HOME}/local/share
-XDG_CONFIG_HOME DEFAULT=@{HOME}/config
-XDG_CACHE_HOME DEFAULT=@{HOME}/cache
-XDG_DATA_DIRS DEFAULT=/usr/local/share/:/usr/share
-XDG_CONFIG_DIRS DEFAULT=/etc/xdg
-XKB_DEFAULT_OPTIONS=caps:escape
+XDG_CONFIG_HOME         DEFAULT=@{HOME}/config
+XDG_DATA_HOME           DEFAULT=@{HOME}/local/share
+XDG_CONFIG_HOME         DEFAULT=@{HOME}/config
+XDG_CACHE_HOME          DEFAULT=@{HOME}/cache
+XDG_DATA_DIRS           DEFAULT=/usr/local/share/:/usr/share
+XDG_CONFIG_DIRS         DEFAULT=/etc/xdg
+XKB_DEFAULT_OPTIONS     DEFAULT=caps:escape
 
-PASSWORD_STORE_DIR DEFAULT=@{HOME}/pass
+PASSWORD_STORE_DIR      DEFAULT=@{HOME}/pass
 
-EDITOR DEFAULT=nvim
-GOPATH DEFAULT=@{HOME}/go
-BROWSER DEFAULT=/usr/bin/firefox
+EDITOR                  DEFAULT=nvim
+GOPATH                  DEFAULT=@{HOME}/go
+BROWSER                 DEFAULT=/usr/bin/firefox
 
-PATH DEFAULT=@{HOME}/bin
-PYTHONPATH DEFAULT=@{HOME}/lib/python
+PATH                    DEFAULT=@{HOME}/bin
+PYTHONPATH              DEFAULT=@{HOME}/lib/python
+IPYTHONDIR              DEFAULT=${XDG_CONFIG_HOME}/ipython
 
-NOTMUCH_CONFIG DEFAULT=@{HOME}/config/notmuch-config
+NOTMUCH_CONFIG          DEFAULT=@{HOME}/config/notmuch-config
 
-XINITRC DEFAULT=${XDG_CONFIG_HOME}/X11/xinitrc
-XSERVERRC DEFAULT=${XDG_CONFIG_HOME}/X11/xserverrc
+XINITRC                 DEFAULT=${XDG_CONFIG_HOME}/X11/xinitrc
+XSERVERRC               DEFAULT=${XDG_CONFIG_HOME}/X11/xserverrc
+
+PSQLRC                  DEFAULT=${XDG_CONFIG_HOME}/pg/psqlrc
+PSQL_HISTORY            DEFAULT=${XDG_CACHE_HOME}/pg/psql_history
+PGPASSFILE              DEFAULT=${XDG_CONFIG_HOME}/pg/pgpass
+PGSERVICEFILE           DEFAULT=${XDG_CONFIG_HOME}/pg/pg_service.conf
