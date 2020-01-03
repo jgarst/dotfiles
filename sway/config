@@ -63,7 +63,6 @@ input "1739:30383:DLL075B:01_06CB:76AF_To" {
 
     # start your launcher
     bindsym $mod+d exec $menu
-    bindsym Ctrl_R exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
