@@ -152,8 +152,8 @@ bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle \
     && pkill -SIGRTMIN+10 i3blocks
 
 #Backlight
-bindsym XF86MonBrightnessUp exec light -U 5
-bindsym XF86MonBrightnessDown exec light -A 5
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
 #Player control
 bindsym XF86AudioPlay exec xmms2 toggle
