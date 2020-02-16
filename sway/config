@@ -5,7 +5,19 @@
 # Read `man 5 sway` for a complete reference.
 
 ### Variables
-#
+
+# set primary gruvbox colorscheme colors
+set $bg #282828
+set $fg #ebdbb2
+set $red #cc241d
+set $green #98971a
+set $yellow #d79921
+set $blue #458588
+set $purple #b16286
+set $aqua #689d68
+set $gray #a89984
+set $darkgray #928374
+
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Home row direction keys, like vim
@@ -16,7 +28,12 @@ set $right l
 # Your preferred terminal emulator
 set $term alacritty
 # Your preferred application launcher
-set $menu dmenu_run
+set $menu bemenu-run -i --prompt='' -H 25 \
+  --tb=$bg --tf=$fg \
+  --fb=$bg --ff=$fg \
+  --nb=$bg --nf=$fg \
+  --sb=$bg --sf=$fg \
+  --hb='#1d2021' --hf=$yellow
 
 ### Output configuration
 #
@@ -194,20 +211,10 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 
-# set primary gruvbox colorscheme colors
-set $bg #282828
-set $red #cc241d
-set $green #98971a
-set $yellow #d79921
-set $blue #458588
-set $purple #b16286
-set $aqua #689d68
-set $gray #a89984
-set $darkgray #1d2021
 
 bar {
     position top
-    status_command i3blocks
+    # status_command i3blocks
     colors {
         # bar background color
         background $bg
