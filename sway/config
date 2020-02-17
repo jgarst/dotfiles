@@ -33,8 +33,9 @@ set $menu bemenu-run -i --prompt='' -H 25 \
   --fb=$bg --ff=$fg \
   --nb=$bg --nf=$fg \
   --sb=$bg --sf=$fg \
-  --hb='#1d2021' --hf=$yellow
+  --hb=$bg --hf=$yellow
 
+#--hb='#1d2021' 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/sway/)
@@ -220,11 +221,11 @@ bar {
         background $bg
         # text color used for blocks that do not have a color specified.
         statusline $yellow
-        # workspaces section            
+        # workspaces section
         #                    border  backgr. text
-        focused_workspace    $aqua $aqua $darkgray
-        inactive_workspace   $darkgray $darkgray $yellow
-        active_workspace     $darkgray $darkgray $yellow
+        focused_workspace    $aqua $bg $fg
+        inactive_workspace   $bg $bg $fg
+        active_workspace     $bg $bg $fg
         urgent_workspace     $red $red $bg
     }
 }
