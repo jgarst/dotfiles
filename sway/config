@@ -38,7 +38,7 @@ set $menu j4-dmenu-desktop --dmenu='bemenu -i --prompt=\'\' -H 25 \
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/sway/)
-output * bg $XDG_CONFIG_HOME/background.jpg fill
+output * bg ${XDG_DATA_HOME}/background.jpg fill
 #
 # Example configuration:
 #
