@@ -14,8 +14,8 @@ BROWSER                 DEFAULT=/usr/bin/firefox
 
 PATH                    DEFAULT=@{HOME}/bin
 PYTHONPATH              DEFAULT=@{HOME}/lib/python
-IPYTHONDIR              DEFAULT=${XDG_CONFIG_HOME}/ipython
-JUPYTER_CONFIG_DIR      DEFAULT=${XDG_CONFIG_HOME}/jupyter
+IPYTHONDIR              DEFAULT=${XDG_DATA_HOME}/ipython
+JUPYTER_CONFIG_DIR      DEFAULT=${XDG_DATA_HOME}/jupyter
 
 NOTMUCH_CONFIG          DEFAULT=@{HOME}/config/notmuch-config
 
