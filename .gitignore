@@ -1,1 +1,4 @@
 .mypy_cache/
+
+# gnome settings, used for firefox etc
+dconf/
