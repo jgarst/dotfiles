@@ -2,3 +2,6 @@
 
 # gnome settings, used for firefox etc
 dconf/
+
+# mimeaps determines the default application, which I probably don't want to port
+mimeapps.list
