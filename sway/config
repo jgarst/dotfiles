@@ -29,6 +29,7 @@ set $right l
 set $term alacritty
 # Your preferred application launcher
 set $menu j4-dmenu-desktop --dmenu='bemenu -i --prompt=\'\' -H 25 \
+  --fn "pango:IBM Plex Sans 12" \
   --tb=$bg --tf=$fg \
   --fb=$bg --ff=$fg \
   --nb=$bg --nf=$fg \
@@ -215,6 +216,7 @@ bindsym $mod+r mode "resize"
 bar {
     position top
     # status_command i3blocks
+    font pango:IBM Plex Sans 12
     colors {
         # bar background color
         background $bg
