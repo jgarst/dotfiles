@@ -235,7 +235,15 @@ bar {
 }
 
 # fast access to password manager
-bindsym $mod+p exec env PASSWORD_STORE_DIR=$HOME/pass passmenu
+bindsym $mod+p exec env PASSWORD_STORE_DIR=$HOME/pass passmenu \
+  -i \
+  --prompt=\'\' -H 28 \
+  --fn "pango:IBM Plex Sans 12" \
+  --tb=$bg --tf=$fg \
+  --fb=$bg --ff=$fg \
+  --nb=$bg --nf=$fg \
+  --sb=$bg --sf=$fg \
+  --hb=$bg --hf=$yellow
 
 include /etc/sway/config.d/*
 
