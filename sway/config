@@ -65,11 +65,11 @@ output * bg ${XDG_DATA_HOME}/background.jpg fill
 # The escape symbol "\" has to be removed.
 # Read `man 5 sway-input` for more information about this section.
 
-input "1739:30383:DLL075B:01_06CB:76AF_To" {
-	dwt enabled
-	tap enabled
-	natural_scroll enabled
-	middle_emulation disabled
+input "type:touchpad" {
+    dwt enabled  # disable while typing
+    tap enabled
+    natural_scroll enabled
+    middle_emulation disabled
 }
 
 ### Key bindings
