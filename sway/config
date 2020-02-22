@@ -16,8 +16,9 @@ set $aqua #689d68
 set $gray #a89984
 set $darkgray #928374
 
-set $mod Mod4  # Logo key
-# set $mod Mod1  # Alt key
+# Logo key
+set $mod Mod4
+# Alt key # set $mod Mod1
 
 # direction keys
 set $left h
@@ -106,13 +107,10 @@ bar
 # Key Bindings #
 ################
 
-bindsym $mod+Return exec $term  # start a terminal
-
-bindsym $mod+q kill  # kill the focused window
-
-bindsym $mod+d exec $menu  # start the application launcher
-
-bindsym $mod+p exec $passmenu  # start the password launcher
+bindsym $mod+Return exec $term
+bindsym $mod+q kill
+bindsym $mod+d exec $menu
+bindsym $mod+p exec $passmenu
 
 
 # Drag floating windows by holding down $mod and left mouse button.
@@ -122,9 +120,11 @@ bindsym $mod+p exec $passmenu  # start the password launcher
 # mouse button for dragging.
 floating_modifier $mod normal
 
-bindsym $mod+Shift+c reload  # reload sway configuration
+# reload sway configuration
+bindsym $mod+Shift+c reload
 
-bindsym $mod+Shift+e exit  # exit sway
+# exit sway
+bindsym $mod+Shift+e exit
 
 
 ############
@@ -180,23 +180,28 @@ bindsym $mod+Shift+0 move container to workspace 10
 # Layout #
 ##########
 
-bindsym $mod+b splith  # Create new windows horizontally
-bindsym $mod+v splitv  # Create new windows vertically
+# create new windows horizontally
+bindsym $mod+b splith
+
+# create new windows vertically
+bindsym $mod+v splitv
 
 # workspace layout modes
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
-bindsym $mod+f fullscreen  # make the focused window fullscreen
+# toggle fullscreen for focused window
+bindsym $mod+f fullscreen
 
-# Switch the focused window between tiling and floating mode
+# toggle tiling and floating mode for the focused window
 bindsym $mod+Shift+space floating toggle
 
 # Switch focus between tiling and floating windows
 bindsym $mod+space focus mode_toggle
 
-bindsym $mod+a focus parent  # focus the parent window
+# focus the parent window
+bindsym $mod+a focus parent
 
 
 ############
@@ -205,10 +210,13 @@ bindsym $mod+a focus parent  # focus the parent window
 
 mode "resize" 
 {
-    bindsym $left resize shrink width 10 px or 10 ppt  # left shrinks width
-    bindsym $down resize grow height 10 px or 10 ppt   # right grows width
-    bindsym $up resize shrink height 10 px or 10 ppt   # up shrinks height
-    bindsym $right resize grow width 10 px or 10 ppt   # down grows height
+    # left shrinks width, right grows width
+    bindsym $left resize shrink width 10 px or 10 ppt
+    bindsym $down resize grow height 10 px or 10 ppt
+
+    # up shrinks height, down grows height
+    bindsym $up resize shrink height 10 px or 10 ppt
+    bindsym $right resize grow width 10 px or 10 ppt
 
     # return to default mode
     bindsym Return mode "default"
