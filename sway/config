@@ -82,23 +82,22 @@ set $passmenu passmenu -i --prompt=\'\' -H 28 \
 ##############
 
 # Conforms to the configuration described in `man 5 sway-bar`
-bar 
+bar
 {
+    status_command i3status
+    separator_symbol ' | '
     position top
-    # status_command i3blocks
     font pango:IBM Plex Sans 12
-    colors 
+    colors
     {
-        # bar background color
         background $bg
-        # text color used for blocks that do not have a color specified.
-        statusline $yellow
-        # workspaces section
-        #                    border  backgr. text
-        focused_workspace    $aqua $bg $fg
-        inactive_workspace   $bg $bg $fg
-        active_workspace     $bg $bg $fg
-        urgent_workspace     $red $red $bg
+        statusline $fg
+
+    #   workspaces           border  backgr  text
+        focused_workspace    $aqua   $bg     $fg
+        inactive_workspace   $bg     $bg     $fg
+        active_workspace     $bg     $bg     $fg
+        urgent_workspace     $red    $red    $bg
     }
 }
 
