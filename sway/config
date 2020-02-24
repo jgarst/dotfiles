@@ -245,6 +245,8 @@ bindsym XF86AudioPlay exec xmms2 toggle
 bindsym XF86AudioNext exec xmms2 next
 bindsym XF86AudioPrev exec xmms2 prev
 
+bindsym --release Print exec grim -g "$(slurp)" - | wl-copy
+
 
 ##############
 # Scratchpad #
