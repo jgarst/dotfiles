@@ -28,6 +28,16 @@ set runtimepath=$XDG_CONFIG_HOME/vim
     \,/usr/share/vim/vimfiles
 let $MYVIMRC='$XDG_CONFIG_HOME/vim/vimrc'
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Tabs
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set tabstop=4
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+
+
 " disable modelines, for absolute control
 set nomodeline
 
