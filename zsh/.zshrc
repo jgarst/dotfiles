@@ -25,3 +25,48 @@ alias vi=nvim
 
 # colorize ls output
 alias ls='ls --color=auto'
+
+
+##############################################################################
+# Reminders for utilities
+##############################################################################
+
+img ()
+{
+    printf 'Try `imv`!\n'
+}
+
+video ()
+{
+    printf 'Try `mpv`!\n'
+}
+
+
+##############################################################################
+# Nudge to use hipster rust utilities
+##############################################################################
+
+du ()
+{
+    printf 'Try using `dua`!\n'
+}
+
+cat ()
+{
+    printf 'Try using `bat`!\n'
+}
+
+find ()
+{
+    printf 'Try using `fd`!\n'
+}
+
+ls ()
+{
+    printf 'Try using `exa`!\n'
+}
+
+sed ()
+{
+    printf 'Try using `sd`!\n'
+}
