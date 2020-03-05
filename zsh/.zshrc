@@ -22,9 +22,7 @@ export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 
 alias vim=nvim
 alias vi=nvim
-
-# colorize ls output
-alias ls='ls --color=auto'
+alias ls=exa
 
 
 ##############################################################################
@@ -59,11 +57,6 @@ cat ()
 find ()
 {
     printf 'Try using `fd`!\n'
-}
-
-ls ()
-{
-    printf 'Try using `exa`!\n'
 }
 
 sed ()
