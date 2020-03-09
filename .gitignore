@@ -5,3 +5,7 @@ dconf/
 
 # mimeaps determines the default application, which I probably don't want to port
 mimeapps.list
+
+# htop config determines which columns are displayed by default
+# I am uncertain how much I want to prescribe default top columns
+htop/

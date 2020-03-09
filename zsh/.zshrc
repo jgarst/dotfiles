@@ -63,3 +63,14 @@ sed ()
 {
     printf 'Try using `sd`!\n'
 }
+
+top ()
+# 2020-03-08
+# htop seems unmaintained with one person committing, one alpha4 release in
+# 2018 and nothing after that.  It is also easier to read than top, and has nice
+# IO monitoring.
+#
+# replacements (ytop) look undercooked
+{
+    printf 'Try using `htop`!\n'
+}
