@@ -1,8 +1,3 @@
-# more history
-HISTFILE=$XDG_DATA_HOME/zsh_history
-HISTSIZE=100000
-SAVEHIST=$HISTSIZE
-
 bindkey -v
 zstyle :compinstall filename '/home/jared/config/zsh/.zshrc'
 

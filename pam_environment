@@ -17,6 +17,10 @@ PYTHONPATH              DEFAULT=@{HOME}/lib/python
 IPYTHONDIR              DEFAULT=${XDG_DATA_HOME}/ipython
 JUPYTER_CONFIG_DIR      DEFAULT=${XDG_DATA_HOME}/jupyter
 
+HISTFILE                DEFAULT=${XDG_DATA_HOME}/shell_history
+HISTSIZE                DEFAULT=100000
+SAVEHIST                DEFAULT=${HISTSIZE}
+
 NOTMUCH_CONFIG          DEFAULT=@{HOME}/config/notmuch-config
 
 XINITRC                 DEFAULT=${XDG_CONFIG_HOME}/X11/xinitrc
