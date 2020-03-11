@@ -9,3 +9,6 @@ mimeapps.list
 # htop config determines which columns are displayed by default
 # I am uncertain how much I want to prescribe default top columns
 htop/
+
+# pulseaudio configuration should be done computer by computer
+pulse/
