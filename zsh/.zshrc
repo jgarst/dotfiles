@@ -19,7 +19,7 @@ alias vim=nvim
 alias vi=nvim
 alias ls=exa
 
-
+alias wget='wget --hsts-file=$XDG_DATA_HOME/wget-hsts'
 ##############################################################################
 # Reminders for utilities
 ##############################################################################

@@ -21,6 +21,8 @@ HISTFILE                DEFAULT=${XDG_DATA_HOME}/shell_history
 HISTSIZE                DEFAULT=100000
 SAVEHIST                DEFAULT=${HISTSIZE}
 
+SQLITE_HISTORY          DEFAULT=${XDG_DATA_HOME}/sqlite_history
+
 NOTMUCH_CONFIG          DEFAULT=@{HOME}/config/notmuch-config
 
 XINITRC                 DEFAULT=${XDG_CONFIG_HOME}/X11/xinitrc
