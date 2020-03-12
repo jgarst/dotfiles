@@ -41,22 +41,46 @@ video ()
 
 du ()
 {
-    printf 'Try using `dua`!\n'
+    if [ -t 1 ]
+    then
+        >&2 echo 'Try using `dua`!'
+        dua "$@"
+    else
+        du "$@"
+    fi
 }
 
 cat ()
 {
-    printf 'Try using `bat`!\n'
+    if [ -t 1 ]
+    then
+        >&2 echo 'Try using `bat`!'
+        bat "$@"
+    else
+        cat "$@"
+    fi
 }
 
 find ()
 {
-    printf 'Try using `fd`!\n'
+    if [ -t 1 ]
+    then
+        >&2 echo 'Try using `fd`!'
+        fd "$@"
+    else
+        find "$@"
+    fi
 }
 
-sed ()
-{
-    printf 'Try using `sd`!\n'
+ sed ()
+ {
+    if [ -t 1 ]
+    then
+        >&2 echo 'Try using `sd`!'
+        sd "$@"
+    else
+        sed "$@"
+    fi
 }
 
 top ()
@@ -67,5 +91,11 @@ top ()
 #
 # replacements (ytop) look undercooked
 {
-    printf 'Try using `htop`!\n'
+    if [ -t 1 ]
+    then
+        >&2 echo 'Try using `htop`!'
+        htop "$@"
+    else
+        top "$@"
+    fi
 }
