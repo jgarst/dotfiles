@@ -12,3 +12,6 @@ htop/
 
 # pulseaudio configuration should be done computer by computer
 pulse/
+
+# slack does not separate data files from config files
+Slack/
