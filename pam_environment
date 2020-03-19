@@ -27,6 +27,8 @@ NOTMUCH_CONFIG          DEFAULT=@{HOME}/config/notmuch-config
 
 CARGO_HOME              DEFAULT=${XDG_DATA_HOME}/cargo
 
+GNUPGHOME               DEFAULT=${XDG_DATA_HOME}/gnupg
+
 XINITRC                 DEFAULT=${XDG_CONFIG_HOME}/X11/xinitrc
 XSERVERRC               DEFAULT=${XDG_CONFIG_HOME}/X11/xserverrc
 
