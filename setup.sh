@@ -1,4 +1,4 @@
 #! /usr/bin/env sh
 
-pacman -S --noconfirm fd
+sudo pacman -S --needed --noconfirm fd shellcheck
 pikaur --noedit --nodiff --needed --noconfirm -S chruby ruby-install
