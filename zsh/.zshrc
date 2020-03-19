@@ -99,3 +99,15 @@ top ()
         top "$@"
     fi
 }
+
+###############################################################################
+# chruby
+
+source /usr/share/chruby/chruby.sh
+
+# find rubies installed in XDG directories
+
+if [ -d "${XDG_DATA_HOME}/rubies" ]
+then
+    RUBIES+=("${(@f)$(fd '.*' ${XDG_DATA_HOME}/rubies --type directory)}")
+fi

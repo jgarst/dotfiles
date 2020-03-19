@@ -1,0 +1,7 @@
+#! /usr/bin/env zsh
+
+# ruby-install command that respects teh XDG standard
+/usr/bin/ruby-install \
+    --rubies-dir ${XDG_DATA_HOME}/rubies \
+    --src-dir ${XDG_CACHE_HOME}/ruby-install \
+    $@

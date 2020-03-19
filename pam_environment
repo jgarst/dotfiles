@@ -12,7 +12,7 @@ EDITOR                  DEFAULT=nvim
 GOPATH                  DEFAULT=@{HOME}/go
 BROWSER                 DEFAULT=/usr/bin/firefox
 
-PATH                    DEFAULT=@{HOME}/bin:${PATH}
+PATH                    DEFAULT=@{HOME}/bin:${XDG_CONFIG_HOME}/bin:${PATH}
 PYTHONPATH              DEFAULT=@{HOME}/lib/python
 IPYTHONDIR              DEFAULT=${XDG_DATA_HOME}/ipython
 JUPYTER_CONFIG_DIR      DEFAULT=${XDG_DATA_HOME}/jupyter
@@ -46,3 +46,10 @@ QT_QPA_PLATFORM         DEFAULT=wayland-egl
 NO_UPDATE_NOTIFIER      DEFAULT=true
 
 CHROME_CONFIG_HOME      DEFAULT=${XDG_DATA_HOME}
+
+BUNDLE_USER_CONFIG      DEFAULT=${XDG_CONFIG_HOME}/bundle
+BUNDLE_USER_CACHE       DEFAULT=${XDG_CACHE_HOME}/bundle
+BUNDLE_USER_PLUGIN      DEFAULT=${XDG_DATA_HOME}/bundle
+
+GEM_HOME                DEFAULT=${XDG_CONFIG_HOME}/gem
+GEM_SPEC_CACHE          DEFAULT=${XDG_DATA_HOME}/gem
