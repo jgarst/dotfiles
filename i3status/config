@@ -34,22 +34,30 @@ battery all
 {
     format = "%status %percentage %remaining"
     integer_battery_capacity = true
+    min_width = "BAT 100% 99:60"
+    align = "center"
 }
 
 disk "/"
 {
     format = "DISK %avail"
+    min_width = "DISK 99.0 GiB"
+    align = "center"
 }
 
 # Number of processes waiting for CPU time in the last n minutes
 load
 {
     format = "LOAD %1min"
+    min_width = "LOAD 9.99"
+    align = "center"
 }
 
 cpu_usage
 {
     format = "CPU  %cpu0  %cpu1  %cpu2  %cpu3"
+    min_width = "CPU 100% 100% 100% 100%"
+    align = "center"
 }
 
 memory
@@ -57,18 +65,24 @@ memory
     format = "MEM %used / %available"
     threshold_degraded = "1G"
     format_degraded = "MEM %used / %available"
+    min_width = "MEM 100.0 MiB / 9.9 GiB"
+    align = "center"
 }
 
 tztime local
 {
     format = "%Y-%m-%d %H:%M"
+    min_width = "9999-12-31 24:00"
+    align = "center"
 }
 
 volume master
 {
-    format = "VOLUME %volume"
+    format = "VOLUME  %volume "
     format_muted = "VOLUME (%volume)"
     mixer = "Master"
+    min_width = "VOLUME (100%)"
+    align = "center"
 }
 
 # XXX: current media?
