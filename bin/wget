@@ -2,4 +2,4 @@
 
 # force wget to conform to XDG standard
 
-wget --hsts-file="${XDG_DATA_HOME}/wget-hsts" "$@"
+/usr/bin/wget --hsts-file="${XDG_DATA_HOME}/wget-hsts" "$@"
