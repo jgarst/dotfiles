@@ -68,4 +68,5 @@ volume master
 {
     format = "VOLUME %volume"
     format_muted = "VOLUME (%volume)"
+    mixer = "Master"
 }
