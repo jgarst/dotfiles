@@ -1,0 +1,11 @@
+#! /usr/bin/sh
+
+# nudge to use a cooler rust utility
+
+if [ -t 1 ]
+then
+    >&2 printf 'Try using \033[1msd\033[0m!'
+    sd "$@"
+else
+    /usr/bin/sed "$@"
+fi

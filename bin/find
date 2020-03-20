@@ -1,0 +1,11 @@
+#! /usr/bin/sh
+
+# nudge to use a cooler rust utility
+
+if [ -t 1 ]
+then
+    >&2 printf 'try using \033[1mfd\033[0m!'
+    fd "$@"
+else
+    /usr/bin/find "$@"
+fi

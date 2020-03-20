@@ -1,0 +1,14 @@
+#! /usr/bin/sh
+
+# 2020-03-08
+# htop is easier to read, and has nice IO monitoring.
+# It also seems unmaintained, with one person committing and one alpha release
+# in 2018 and nothing after that.  Replacements (ytop) look undercooked
+
+if [ -t 1 ]
+then
+    >&2 printf 'Try using \033[1mhtop\033[0m!'
+    htop "$@"
+else
+    /usr/bin/top "$@"
+fi
