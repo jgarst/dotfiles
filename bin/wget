@@ -1,0 +1,5 @@
+#! /usr/bin/sh
+
+# force wget to conform to XDG standard
+
+wget --hsts-file="${XDG_DATA_HOME}/wget-hsts" "$@"
