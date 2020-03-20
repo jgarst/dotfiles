@@ -70,3 +70,7 @@ volume master
     format_muted = "VOLUME (%volume)"
     mixer = "Master"
 }
+
+# XXX: current media?
+# XXX: current vpn?
+# XXX: email and todo counters?
