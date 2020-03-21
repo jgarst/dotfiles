@@ -1,6 +1,6 @@
 #! /usr/bin/sh
 
-# ruby-install command that respects teh XDG standard
+# ruby-install command that respects the XDG standard
 /usr/bin/ruby-install \
     --rubies-dir "${XDG_DATA_HOME}/rubies" \
     --src-dir "${XDG_CACHE_HOME}/ruby-install" \
