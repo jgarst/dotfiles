@@ -1,0 +1,20 @@
+#! /usr/bin/env sh
+
+# check for force pushes, and remind the use of pushf
+# pushf is the force-push-with-lease alias
+
+# I'm fine with this clobbering other scripts
+# because other scripts better not be force pushing
+for arg in "$@"
+do
+    if [ "$arg" = "push" ]
+    then
+        ispush=1
+    elif [ "$ispush" = 1 ] && [ "$arg" = '-f' ]
+    then
+        printf "Try using \033[1mgit pushf\033[0m!\n"
+        exit 1
+    fi
+done
+
+/usr/bin/git "$@"
