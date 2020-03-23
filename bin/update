@@ -1,16 +1,17 @@
 #! /usr/bin/env zsh
 
+export PATH=::/usr/local/sbin:/usr/local/bin:/usr/bin
+
 doas pacman -Syu
 
 # update pikaur
-git -C ~/pikaur pull origin master
-
-cd ~/pikaur \
+git -C ~/pikaur pull origin master \
+&& cd ~/pikaur \
 && makepkg -sric --needed
 
 pikaur -Syu
 git -C ~/pass push
-paccache -r
+doas paccache -r
 
 fwupdmgr refresh \
 && fwupdmgr get-updates
