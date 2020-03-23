@@ -1,0 +1,21 @@
+#! /usr/bin/env zsh
+
+doas pacman -Syu
+
+# update pikaur
+git -C ~/pikaur pull origin master
+
+cd ~/pikaur \
+&& makepkg -sric --needed
+
+pikaur -Syu
+git -C ~/pass push
+paccache -r
+
+fwupdmgr refresh \
+&& fwupdmgr get-updates
+
+mandb
+
+# remove unused packages
+doas pacman -Rns "$(pacman -Qtdq)"
