@@ -35,7 +35,17 @@ set $term alacritty
 
 # device, resolution, and wallpaper
 # find output names with `swaymsg -t get_outputs`
-output * bg ${XDG_DATA_HOME}/background.jpg fill
+output Virtual-1
+{
+    bg ${XDG_DATA_HOME}/background.jpg fill
+    resolution 1920x1200
+}
+
+output "Sharp Corporation 0x1449 0x00000000"
+{
+    bg ${XDG_DATA_HOME}/background.jpg fill
+    resolution 1920x1080
+}
 
 # conforms to man 5 sway-input format
 # find names of inputs with `swaymsg -t get_inputs`
