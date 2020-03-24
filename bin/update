@@ -1,11 +1,17 @@
 #! /usr/bin/env sh
-set -euf
+set -uf
 
-if [ -x "$(command -v pikaur)" ]
-then
-    pikaur -Syu
-fi
+pikaur -Syu --needed
 
+(orphans="$(pikaur -Qtdq)" && update -Rns "$orphans")
+
+# XXX: can be moved to update hooks
+# keep three versions of installed packages
+# and one version of uninstalled packages
+paccache -vrk3
+paccache -vruk1
+paccache --cachedir ~/cache/pikaur/pkg -vrk3
+paccache --cachedir ~/cache/pikaur/pkg -vruk1
 
 if [ -d ~/pass ]
 then
@@ -15,11 +21,5 @@ fi
 
 if [ -x "$(command -v fwupdmgr)" ]
 then
-    fwupdmgr refresh \
-    && fwupdmgr get-updates
+    fwupdmgr refresh && fwupdmgr get-updates
 fi
-
-mandb
-
-doas _pacman_update_and_prune
-

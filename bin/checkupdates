@@ -1,0 +1,8 @@
+#! /usr/bin/env sh
+
+if [ -x "$(command -v pikaur)" ]
+then
+    /usr/bin/checkupdates ; pikaur -Qua 2>/dev/null
+else
+    /usr/bin/checkupdates
+fi
