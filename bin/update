@@ -1,7 +1,7 @@
 #! /usr/bin/env sh
 set -uf
 
-pikaur -Syu --needed
+pikaur -Syu
 
 (orphans="$(pikaur -Qtdq)" && update -Rns "$orphans")
 
