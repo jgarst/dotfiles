@@ -281,7 +281,7 @@ include /etc/sway/config.d/*
 # Disable xwayland :-0 #
 ########################
 
-xwayland disable
+# xwayland disable
 
 #################################################################
 # Other systemd units can use graphical-session as a dependency #
