@@ -13,7 +13,7 @@ paccache -vruk1
 paccache --cachedir ~/cache/pikaur/pkg -vrk3
 paccache --cachedir ~/cache/pikaur/pkg -vruk1
 
-if [ -d ~/pass ]
+if [ -d ~/pass/.git ]
 then
     git -C ~/pass push
 fi
