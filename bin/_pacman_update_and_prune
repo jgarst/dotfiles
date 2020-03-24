@@ -1,0 +1,12 @@
+#! /usr/bin/env sh
+
+set -euf
+
+pacman -Syu
+paccache -r
+
+orphans=$(pacman -Qtdq)
+if [ -n "$orphans" ]
+then
+    pacman -Rns orphans
+fi

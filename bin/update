@@ -1,22 +1,25 @@
-#! /usr/bin/env zsh
+#! /usr/bin/env sh
+set -euf
 
-export PATH=::/usr/local/sbin:/usr/local/bin:/usr/bin
+if [ -x "$(command -v pikaur)" ]
+then
+    pikaur -Syu
+fi
 
-doas pacman -Syu
 
-# update pikaur
-git -C ~/pikaur pull origin master \
-&& cd ~/pikaur \
-&& makepkg -sric --needed
+if [ -d ~/pass ]
+then
+    git -C ~/pass push
+fi
 
-pikaur -Syu
-git -C ~/pass push
-doas paccache -r
 
-fwupdmgr refresh \
-&& fwupdmgr get-updates
+if [ -x "$(command -v fwupdmgr)" ]
+then
+    fwupdmgr refresh \
+    && fwupdmgr get-updates
+fi
 
 mandb
 
-# remove unused packages
-doas pacman -Rns "$(pacman -Qtdq)"
+doas _pacman_update_and_prune
+
