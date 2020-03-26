@@ -15,3 +15,7 @@ pulse/
 
 # slack does not separate data files from config files
 Slack/
+
+# zoom should be configured per computer
+zoomus.conf
+Unknown Organization/
