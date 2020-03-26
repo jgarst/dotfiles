@@ -77,7 +77,6 @@ set $menu j4-dmenu-desktop \
   --hb=$bg --hf=$yellow'
 
 # passwords
-# XXX: passmenu needs to be adapted to use wayland tools
 set $passmenu passmenu -i --prompt=\'\' -H 28 \
   --fn "pango:IBM Plex Sans 12" \
   --tb=$bg --tf=$fg \
