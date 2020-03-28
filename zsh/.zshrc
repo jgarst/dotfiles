@@ -18,15 +18,11 @@ alias cat=bat
 
 
 ###############################################################################
-# chruby
+# initialize rbenv
+#
 
-source /usr/share/chruby/chruby.sh
+eval "$(rbenv init -)"
 
-# find rubies installed in XDG directories
-if [ -d "${XDG_DATA_HOME}/rubies" ]
-then
-    RUBIES+=(${XDG_DATA_HOME}/rubies/*/)
-fi
 
 ###############################################################################
 # command line nudges

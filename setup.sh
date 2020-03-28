@@ -11,8 +11,8 @@ packages=(
 )
 
 aurs=(
-    chruby-git
-    ruby-install
+    rbenv
+    ruby-build
     zoom
     pass-git
 )
