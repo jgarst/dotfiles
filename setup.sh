@@ -1,7 +1,24 @@
-#! /usr/bin/env sh
+#! /usr/bin/env bash
 
-doas pacman -S --needed --noconfirm fd shellcheck libpulse vim-gitgutter sd bat neovim
-pikaur --noedit --nodiff --needed --noconfirm -S chruby-git ruby-install zoom pass-git
+packages=(
+    fd
+    shellcheck
+    libpulse
+    neovim
+    vim-gitgutter
+    sd
+    bat
+)
+
+aurs=(
+    chruby-git
+    ruby-install
+    zoom
+    pass-git
+)
+
+doas pacman -S --needed "${packages[@]}"
+pikaur --noedit --nodiff --needed -S "${aurs[@]}"
 
 mandb
 
