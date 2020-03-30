@@ -1,5 +1,5 @@
 # execute machine specific initialization
-localrc="${ZDOTDIR}/`hostname`.zshrc"
+localrc="${ZDOTDIR}/`/usr/bin/hostname`.zshrc"
 if [ -f "${localrc}" ]
 then
     source "${localrc}"

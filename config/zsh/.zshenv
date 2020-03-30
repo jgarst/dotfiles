@@ -1,5 +1,5 @@
 # instantiate machine specific environment variables
-localenv="${ZDOTDIR}/`hostname`.zshenv"
+localenv="${ZDOTDIR}/`/usr/bin/hostname`.zshenv"
 
 if [ -f "$localenv" ]
 then
