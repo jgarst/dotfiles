@@ -8,6 +8,7 @@ packages=(
     vim-gitgutter
     sd
     bat
+    inetutils
 )
 
 aurs=(

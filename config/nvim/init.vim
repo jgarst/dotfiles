@@ -59,6 +59,9 @@ set statusline+=%-19(%3l,%02c%03V%)  " line number, row, row with expanded tabs
 filetype plugin on
 syntax on
 
+" hardcode odd file extensions
+autocmd BufNewFile,BufRead *.zshenv set syntax=zsh
+
 " search settings
 set showmatch  " live match highlighting
 set hlsearch  " highlight searches
