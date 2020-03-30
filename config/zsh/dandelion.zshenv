@@ -19,3 +19,10 @@ export GR_ABBREV_USERNAME="jgarst"
 
 export KEY_SUFFIX="grandrounds.com"
 export GIT_ORG="consultingmd"
+
+
+###############################################################################
+# VM specific settings
+
+# VMware products have invisible mouse cursors without software rendering
+export WLR_NO_HARDWARE_CURSORS=1
