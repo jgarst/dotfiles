@@ -61,6 +61,7 @@ syntax on
 
 " hardcode odd file extensions
 autocmd BufNewFile,BufRead *.zshenv set syntax=zsh
+autocmd BufNewFile,BufRead *.zshrc set syntax=zsh
 
 " search settings
 set showmatch  " live match highlighting

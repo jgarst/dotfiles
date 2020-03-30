@@ -1,3 +1,11 @@
+# execute machine specific initialization
+localrc="${ZDOTDIR}/`hostname`.zshrc"
+if [ -f "${localrc}" ]
+then
+    source "${localrc}"
+fi
+
+
 bindkey -v
 zstyle :compinstall filename '/home/jared/config/zsh/.zshrc'
 
