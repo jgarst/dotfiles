@@ -1,5 +1,11 @@
 # configuration conforms to `man 5 sway`
 
+#################################
+# System Specific Configuration #
+#################################
+
+include ${XDG_CONFIG_HOME}/sway/`hostname`
+
 #############
 # Variables #
 #############
@@ -35,11 +41,6 @@ set $term alacritty
 
 # device, resolution, and wallpaper
 # find output names with `swaymsg -t get_outputs`
-output Virtual-1
-{
-    bg ${XDG_DATA_HOME}/background.jpg fill
-    resolution 1920x1200
-}
 
 output "Sharp Corporation 0x1449 0x00000000"
 {
