@@ -18,15 +18,15 @@ set autoread
 au BufEnter,FocusGained * checktime
 
 " file locations
-set directory=$XDG_CACHE_HOME/vim,~/,/tmp
-set backupdir=$XDG_CACHE_HOME/vim,~/,/tmp
-set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
-set runtimepath=$XDG_CONFIG_HOME/vim
-    \,$XDG_CONFIG_HOME/vim/after
+set directory=$XDG_CACHE_HOME/nvim,~/,/tmp
+set backupdir=$XDG_CACHE_HOME/nvim,~/,/tmp
+set viminfo+=n$XDG_CACHE_HOME/nvim/viminfo
+set runtimepath=$XDG_CONFIG_HOME/nvim
+    \,$XDG_CONFIG_HOME/nvim/after
     \,$VIM
     \,$VIMRUNTIME
+    \,/usr/share/nvim/vimfiles
     \,/usr/share/vim/vimfiles
-let $MYVIMRC='$XDG_CONFIG_HOME/vim/vimrc'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tabs
