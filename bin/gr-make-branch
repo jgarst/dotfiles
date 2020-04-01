@@ -1,0 +1,7 @@
+#! /usr/bin/env sh
+
+# Grand Rounds specific script to grab api tokens before running make-branch
+
+JIRA_API_TOKEN="$(pass jira_api_token)" \
+    JIRA_USERNAME="$(pass jira_username)" \
+    "${GR_HOME}"/engineering/bin/gr-make-branch "$@"
