@@ -9,6 +9,10 @@ packages=(
     sd
     bat
     inetutils
+    grim
+    slurp
+    imv
+    wl-clipboard
 )
 
 aurs=(
