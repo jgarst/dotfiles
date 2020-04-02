@@ -45,27 +45,11 @@ function video
     >&2 printf 'Try \033[1mmpv\033[0m!\n'
 }
 
-
-function sed
-# a nudge to use a cooler utility
-{
-    >&2 printf 'Try using \033[1msd\033[0m!\n'
-}
-
-
 function du
 # a nudge to use a cooler utility
 {
     >&2 printf 'Try using \033[1mdua]033m!\n'
 }
-
-
-function find
-# a nudge to use a cooler utility
-{
-    >&2 printf 'Try using \033[1mfd\033[0m!'
-}
-
 
 function top
 {
