@@ -4,5 +4,5 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 
-" ruler at 80 characters
-set colorcolumn=80
+" ruler at 81 characters
+set colorcolumn=81
