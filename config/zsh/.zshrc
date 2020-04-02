@@ -60,12 +60,6 @@ function top
     >&2 printf 'Try using \033[1mhtop\033[0m!\n'
 }
 
-function jira-environment
-{
-    local env_file="${XDG_DATA_HOME}/jira/creds.gpg"
-    $(gpg --use-agent --no-tty --quiet -o - "${env_file}")
-}
-
 
 # From gary bernheardt's dotfiles
 # https://github.com/garybernhardt/dotfiles
