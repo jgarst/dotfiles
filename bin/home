@@ -1,0 +1,16 @@
+#! /usr/bin/env sh
+
+# This pattern and command is taken from emilyst's dotfiles 
+# https://github.com/emilyst/home
+
+# Maintaining dotfiles in a git repo is a great idea, but support for the XDG
+# spec is too intermittent and fragile to rely on.  This script helps me keep
+# the entire home directory as a git repo.
+
+# To prevent git aware tools from interpreting all my files as project files
+# `home` uses an obfuscated git repo.
+git --work-tree="${HOME}" --git-dir="${HOME}/home.git" "$@"
+
+# This also semantically separates maintaining my dotfiles from programming
+
+# The `home` gitignore requires more workarounds for this workaround to work.
