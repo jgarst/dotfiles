@@ -60,9 +60,43 @@ function top
     >&2 printf 'Try using \033[1mhtop\033[0m!\n'
 }
 
-
 function jira-environment
 {
     local env_file="${XDG_DATA_HOME}/jira/creds.gpg"
     $(gpg --use-agent --no-tty --quiet -o - "${env_file}")
 }
+
+
+# From gary bernheardt's dotfiles
+# https://github.com/garybernhardt/dotfiles
+
+# By default, ^S freezes terminal output and ^Q resumes it.  Disable that so
+# that those keys can be used for other things
+unsetopt flowcontrol
+# Run `hs` in the current working directory, appending the selected path,
+# if any, to the current command.
+function insert-hs-path-in-command-line()
+{
+    local selected_path
+    # print a newline or we'll clobber the old prompt.
+    echo
+    # Find the path
+    selected_path=$(fd -HI '.*' --type file --type directory | hs) || return
+    # only continue if I selected something
+    if [ -n "$selected_path" ]
+    then
+        # Escape the path, since I am inserting it into the command line.
+        # E.g. spaces would cause it to be multiple arguments 
+        # instead of a single path argument.
+        selected_path=$(printf '%q' "$selected_path")
+        # Append the selection to the current command buffer.
+        eval 'LBUFFER="$LBUFFER$selected_path "'
+        # Redraw the prompt since `hs` has drawn several new lines of text.
+    fi
+
+    zle reset-prompt
+}
+# Create the zle widget
+zle -N insert-hs-path-in-command-line
+# Bind the key to the newly created widget
+bindkey "^S" "insert-hs-path-in-command-line"
