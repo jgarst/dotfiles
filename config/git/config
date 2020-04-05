@@ -18,7 +18,7 @@
 	tool = vimdiff
 	conflictstyle = diff3
 [core]
-	editor = nvim 
+	editor = nvim
 [rebase]
 	autosquash = true
 [mergetool]
@@ -40,3 +40,6 @@
 	cmd = git-nbmergetool merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 [diff]
 	noprefix = true
+
+[includeIf "gitdir:/home/jared/home.git"]
+    path = ~/home.gitconfig
