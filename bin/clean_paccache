@@ -1,0 +1,6 @@
+#! /usr/bin/env sh
+
+paccache -vrk3 \
+&& paccache -vruk1 \
+&& paccache --cachedir /home/jared/cache/pikaur/pkg -vrk3 \
+&& paccache --cachedir /home/jared/cache/pikaur/pkg -vruk1

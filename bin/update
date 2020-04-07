@@ -1,17 +1,14 @@
 #! /usr/bin/env sh
 set -uf
 
-pikaur -Syu
+pikaur -Syu --config "${XDG_CONFIG_HOME}/pacman.d/pacman.conf"
 
-(orphans="$(pikaur -Qtdq)" && update -Rns "$orphans")
+orphans=$(pikaur -Qtdq --config "${XDG_CONFIG_HOME}/pacman.d/pacman.conf")
 
-# XXX: can be moved to update hooks
-# keep three versions of installed packages
-# and one version of uninstalled packages
-paccache -vrk3
-paccache -vruk1
-paccache --cachedir ~/cache/pikaur/pkg -vrk3
-paccache --cachedir ~/cache/pikaur/pkg -vruk1
+if [ -n "${orphans}" ]
+then
+    pikaur -Rns --config "${XDG_CONFIG_HOME}/pacman.d/pacman.conf" "${orphans}"
+fi
 
 if [ -d ~/pass/.git ]
 then
