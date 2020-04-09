@@ -1,0 +1,3 @@
+#! /usr/bin/env sh
+
+/usr/bin/pikaur --config "${XDG_CONFIG_HOME}/pacman.d/pacman.conf" "$@"

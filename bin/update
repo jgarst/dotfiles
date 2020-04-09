@@ -1,13 +1,15 @@
-#! /usr/bin/env sh
+#! /usr/bin/env bash
 set -uf
 
-pikaur -Syu --config "${XDG_CONFIG_HOME}/pacman.d/pacman.conf"
+pikaur -Syu
 
-orphans=$(pikaur -Qtdq --config "${XDG_CONFIG_HOME}/pacman.d/pacman.conf")
+printf "\n"
+printf "\033[1mchecking for orphaned packages\033[0m\n"
+mapfile -t orphans < <(pikaur -Qtdq)
 
-if [ -n "${orphans}" ]
+if [ ${#orphans[@]} -ne 0 ]
 then
-    pikaur -Rns --config "${XDG_CONFIG_HOME}/pacman.d/pacman.conf" "${orphans}"
+    pikaur -Rns "${orphans[*]}"
 fi
 
 if [ -d ~/pass/.git ]
