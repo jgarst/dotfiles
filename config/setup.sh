@@ -13,6 +13,7 @@ packages=(
     slurp
     imv
     wl-clipboard
+    xdg-utils
 )
 
 aurs=(
