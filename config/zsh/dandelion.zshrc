@@ -8,3 +8,5 @@ source "${GR_HOME}/engineering/bash/vault-authentication.sh"
 
 path+=("${GR_HOME}/engineering/bin")
 export PATH
+
+export AWS_DEFAULT_ROLE=developer
