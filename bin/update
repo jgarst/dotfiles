@@ -9,7 +9,7 @@ mapfile -t orphans < <(pikaur -Qtdq)
 
 if [ ${#orphans[@]} -ne 0 ]
 then
-    pikaur -Rns "${orphans[*]}"
+    pikaur -Rns "${orphans[@]}"
 fi
 
 if [ -d ~/pass/.git ]
