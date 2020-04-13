@@ -14,6 +14,7 @@ packages=(
     imv
     wl-clipboard
     xdg-utils
+    pavucontrol
 )
 
 aurs=(
