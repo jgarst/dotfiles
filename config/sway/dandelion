@@ -3,3 +3,7 @@ output *
     bg ${XDG_DATA_HOME}/background.jpg fill
     scale 2
 }
+
+input type:keyboard {
+    xkb_options shift:both_capslock
+}
