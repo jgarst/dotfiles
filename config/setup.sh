@@ -22,6 +22,7 @@ aurs=(
     ruby-build
     zoom
     pass-git
+    youtube-dl
 )
 
 doas pacman -S --needed "${packages[@]}"
