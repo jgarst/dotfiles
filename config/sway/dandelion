@@ -2,6 +2,7 @@ output *
 {
     bg ${XDG_DATA_HOME}/background.jpg fill
     scale 2
+    resolution 3840x2160
 }
 
 input type:keyboard {
