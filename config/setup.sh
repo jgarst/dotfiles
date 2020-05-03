@@ -15,6 +15,7 @@ packages=(
     wl-clipboard
     xdg-utils
     pavucontrol
+    connman
 )
 
 aurs=(
@@ -26,6 +27,7 @@ aurs=(
 )
 
 doas pacman -S --needed "${packages[@]}"
+doas pacman -R "netctl"
 pikaur --noedit --nodiff --needed -S "${aurs[@]}"
 
 mandb

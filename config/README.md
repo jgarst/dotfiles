@@ -20,3 +20,8 @@ Filesystems
     ```
     proc	/proc	proc	nosuid,nodev,noexec,hidepid=2,gid=proc	0	0
     ```
+
+WiFi
+----
+The setup uses connman as a network manager, and wpa\_supplicant to authenticate to wireless networks.
+I hope to replace wpa\_supplicant with iwd once scanning for networks is supported
