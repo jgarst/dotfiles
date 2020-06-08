@@ -94,3 +94,24 @@ function insert-hs-path-in-command-line()
 zle -N insert-hs-path-in-command-line
 # Bind the key to the newly created widget
 bindkey "^S" "insert-hs-path-in-command-line"
+
+
+###############################################################################
+# set terminal title to the current working directory
+###############################################################################
+
+autoload -Uz add-zsh-hook
+
+function xterm_title_precmd () {
+    print -Pn -- '\e]2; %~\a'
+}
+
+function xterm_title_preexec () {
+    print -Pn -- '\e]2; %~ %# ' && print -n -- "${(q)1}\a"
+}
+
+if [[ "$TERM" == (alacritty*|gnome*|konsole*|putty*|rxvt*|screen*|tmux*|xterm*) ]]
+then
+    add-zsh-hook -Uz precmd xterm_title_precmd
+    add-zsh-hook -Uz preexec xterm_title_preexec
+fi
