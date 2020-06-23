@@ -6,7 +6,9 @@ then
 fi
 
 
-bindkey -v
+# use emacs line editing mode; I don't need to complexity of vim here and
+# accidentally hitting escape is annoying.
+bindkey -e
 zstyle :compinstall filename '/home/jared/config/zsh/.zshrc'
 
 # Initialize completion
