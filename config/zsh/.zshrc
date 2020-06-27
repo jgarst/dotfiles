@@ -5,7 +5,6 @@ then
     source "${localrc}"
 fi
 
-
 # use emacs line editing mode; I don't need to complexity of vim here and
 # accidentally hitting escape is annoying.
 bindkey -e
@@ -117,3 +116,7 @@ then
     add-zsh-hook -Uz precmd xterm_title_precmd
     add-zsh-hook -Uz preexec xterm_title_preexec
 fi
+
+
+# Use menu for autocompletion
+zstyle ':completion:*' menu select
