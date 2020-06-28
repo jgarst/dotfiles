@@ -12,10 +12,35 @@ set nowritebackup
 set undofile
 set undodir=$XDG_CACHE_HOME/vim/undo
 
-" Don't use swap files, autoreload when file has changed on disk
+" Do not use swap files
 set noswapfile
+
+
+function! DiskReload()
+    " Reload the buffer in this window if the file has been updated
+
+    if getcmdwintype() == ''
+        checktime
+    else
+        " The cmdwindow mode disables commands that edit other buffers.
+        " To get around this, we force vim to leave the cmdwindow, reload
+        " everything, then restart the cmdwindow at the same position
+        "
+        " This is a hack that probably doesn't work very well.
+
+        let g:CmdWindowLineMark=line(".")
+        call feedkeys(":q\<cr>")
+        call feedkeys(":checktime\<cr>")
+        call feedkeys("q::execute \"normal \".g:CmdWindowLineMark.\"G\"\<cr>")
+        call feedkeys(":\<cr>")
+    endif
+endfunction
+
 set autoread
-au BufEnter,FocusGained * checktime
+au BufEnter,FocusGained * call DiskReload()
+autocmd FileChangedShellPost *
+  \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+
 
 " file locations
 set directory=$XDG_CACHE_HOME/nvim,~/,/tmp
