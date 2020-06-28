@@ -38,7 +38,7 @@ endfunction
 
 set autoread
 au BufEnter,FocusGained * call DiskReload()
-autocmd FileChangedShellPost *
+autocmd FileChangedShellPost * 
   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 
 
@@ -118,12 +118,23 @@ autocmd FileType gitcommit setlocal spellcapcheck=
 " have yanking use system clipboard
 set clipboard=unnamedplus
 
+
+function! RestoreCursor()
+    " The `"` mark stores the last position in the current file.
+    " This could probably be replaced with :mkview and :loadview, and be a
+    " little more robust.
+
+    if line("'\"") > 0 && line("'\"") <= line("$")
+        exe "normal! g`\""
+        return 1
+    endif
+endfunction
+
 " save position in file
 augroup resCur
     autocmd!
-    autocmd BufReadPost * call setpos(".", getpos("'\""))
+    autocmd BufWinEnter * call RestoreCursor()
 augroup END
-
 " Netrw supports reading and writing across networks. Disable it.
 let g:netrw_dirhistmax = 0
 
