@@ -1,0 +1,7 @@
+xrdb ${XDG_CONFIG_HOME}/X11/Xresources
+setxkbmap -option caps:swapescape
+
+[ -f /etc/xprofile ] && . /etc/xprofile
+[ -f ~/.xprofile ] && . ~/.xprofile
+
+exec i3

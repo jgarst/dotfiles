@@ -16,13 +16,13 @@ packages=(
     xdg-utils
     pavucontrol
     connman
+    pass
 )
 
 aurs=(
     rbenv
     ruby-build
     zoom
-    pass-git
     youtube-dl
 )
 
