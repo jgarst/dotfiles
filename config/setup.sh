@@ -24,6 +24,7 @@ aurs=(
     ruby-build
     zoom
     youtube-dl
+    dmenu-height
 )
 
 doas pacman -S --needed "${packages[@]}"
