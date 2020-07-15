@@ -37,7 +37,8 @@ font pango:IBM Plex Sans 12
 # j4-dmenu-desktop finds the .desktop files and sorts them by frequency
 set $menu j4-dmenu-desktop \
   --usage-log="${XDG_DATA_HOME}"/j4-dmenu-desktop_history \
-  --no-generic
+  --no-generic \
+  --dmenu='dmenu -i -fn "IBM Plex Sans-14" -nb "#282828" -nf "#ebdbb2" -sb "#282828" -sf "#d79921"'
 
 # passwords
 set $passmenu passmenu
