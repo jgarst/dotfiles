@@ -26,7 +26,7 @@ set $up k
 set $right l
 
 set $term alacritty
-
+font pango:IBM Plex Sans 12
 
 #############
 # Launchers #
