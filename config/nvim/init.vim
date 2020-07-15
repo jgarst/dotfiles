@@ -19,9 +19,9 @@ set noswapfile
 function! DiskReload()
     " Reload the buffer in this window if the file has been updated
 
-    if getcmdwintype() == ''
-        checktime
-    else
+    let wintype = getcmdwintype()
+
+    if wintype == ':'
         " The cmdwindow mode disables commands that edit other buffers.
         " To get around this, we force vim to leave the cmdwindow, reload
         " everything, then restart the cmdwindow at the same position
@@ -33,6 +33,20 @@ function! DiskReload()
         call feedkeys(":checktime\<cr>")
         call feedkeys("q::execute \"normal \".g:CmdWindowLineMark.\"G\"\<cr>")
         call feedkeys(":\<cr>")
+    elseif wintype == "/"
+        let g:CmdWindowLineMark=line(".")
+        call feedkeys(":q\<cr>")
+        call feedkeys(":checktime\<cr>")
+        call feedkeys("q/:execute \"normal \".g:CmdWindowLineMark.\"G\"\<cr>")
+        call feedkeys(":\<cr>")
+    elseif wintype == "?"
+        let g:CmdWindowLineMark=line(".")
+        call feedkeys(":q\<cr>")
+        call feedkeys(":checktime\<cr>")
+        call feedkeys("q?:execute \"normal \".g:CmdWindowLineMark.\"G\"\<cr>")
+        call feedkeys(":\<cr>")
+    else
+        checktime
     endif
 endfunction
 
