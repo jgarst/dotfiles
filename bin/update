@@ -22,3 +22,8 @@ if [ -x "$(command -v fwupdmgr)" ]
 then
     fwupdmgr refresh && fwupdmgr get-updates
 fi
+
+if [ -x "$(command -v bat)" ]
+then
+    bat cache --build
+fi
