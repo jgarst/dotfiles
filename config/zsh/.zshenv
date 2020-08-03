@@ -57,3 +57,7 @@ export BUNDLE_USER_CACHE=${XDG_CACHE_HOME}/bundle
 export BUNDLE_USER_PLUGIN=${XDG_DATA_HOME}/bundle
 
 export GEM_SPEC_CACHE=${XDG_CACHE_HOME}/gem
+
+export XAUTHORITY=${XDG_DATA_HOME}/xorg/Xauthority
+
+export LESSHISTFILE=/dev/null
