@@ -25,5 +25,5 @@ fi
 
 if [ -x "$(command -v bat)" ]
 then
-    bat cache --build
+    (cd / && bat cache --build)
 fi
