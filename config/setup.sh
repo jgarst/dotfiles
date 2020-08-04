@@ -1,22 +1,35 @@
 #! /usr/bin/env bash
 
 packages=(
+    base
+    linux
+    linux-firmware
+    neovim
+    git
+    inetutils
+    connman
+    iwd
     fd
     shellcheck
-    libpulse
-    neovim
     vim-gitgutter
     sd
     bat
-    inetutils
+    imv
+    xdg-utils
+    pass
+    brightnessctl
+)
+
+sound=(
+    alsa-utils
+    pulseaudio
+    pavucontrol
+)
+
+wayland=(
     grim
     slurp
-    imv
     wl-clipboard
-    xdg-utils
-    pavucontrol
-    connman
-    pass
 )
 
 aurs=(
@@ -27,9 +40,8 @@ aurs=(
     dmenu-height
 )
 
-doas pacman -S --needed "${packages[@]}"
-doas pacman -R "netctl"
-pikaur --noedit --nodiff --needed -S "${aurs[@]}"
+doas pacman -S --needed "${packages[@]}" "${sound[@]}"
+# pikaur --noedit --nodiff --needed -S "${aurs[@]}"
 
 mandb
 
