@@ -7,6 +7,7 @@ packages=(
     linux-firmware
     neovim
     git
+    git-lfs
     inetutils
     connman
     iwd
