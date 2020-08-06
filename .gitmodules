@@ -1,3 +1,6 @@
 [submodule "local/share/nvim/site/pack/lkml/start/lkml.vim"]
 	path = local/share/nvim/site/pack/lkml/start/lkml.vim
 	url = git@github.com:thalesmello/lkml.vim.git
+[submodule "pikaur"]
+	path = pikaur
+	url = git@github.com:actionless/pikaur.git
