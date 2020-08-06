@@ -5,6 +5,7 @@ packages=(
     base-devel
     linux
     linux-firmware
+    udisks2
     neovim
     git
     git-lfs
