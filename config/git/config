@@ -59,3 +59,5 @@
 
 [includeIf "gitdir:/home/jared/home.git"]
     path = ~/home.gitconfig
+[pull]
+	ff = only
