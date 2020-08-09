@@ -19,6 +19,8 @@ packages=(
     bat
     imv
     xdg-utils
+    i3-wm
+    i3status
     pass
     brightnessctl
 )
