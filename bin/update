@@ -27,3 +27,5 @@ if [ -x "$(command -v bat)" ]
 then
     (cd / && bat cache --build)
 fi
+
+home submodule update --init --remote --rebase
