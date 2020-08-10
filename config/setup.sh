@@ -48,15 +48,11 @@ wayland=(
 )
 
 aurs=(
-    rbenv
-    ruby-build
     zoom
     youtube-dl
-    dmenu-height
 )
 
-doas pacman -S --needed "${packages[@]}" "${sound[@]}" "${x11[@]}" "${ios[@]}"
-# pikaur --noedit --nodiff --needed -S "${aurs[@]}"
+doas pikaur -S --needed "${packages[@]}" "${sound[@]}" "${x11[@]}"
 
 mandb
 
