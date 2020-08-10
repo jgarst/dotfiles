@@ -1,0 +1,13 @@
+#! /usr/bin/env sh
+
+bemenu \
+  --ignorecase \
+  --prompt='' \
+  --fn 'pango:IBM Plex Sans 24' \
+  --line-height 52 \
+  --tb=#282828 --tf=#ebdbb2 \
+  --fb=#282828 --ff=#ebdbb2\
+  --nb=#282828 --nf=#ebdbb2\
+  --sb=#282828 --sf=#ebdbb2 \
+  --hb=#282828 --hf=#d79921 \
+  "$@"
