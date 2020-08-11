@@ -33,7 +33,7 @@ font pango:IBM Plex Sans 12
 #############
 
 # applications
-set $menu i3-dmenu-desktop
+set $menu i3-dmenu-desktop --dmenu="bemenu --ignorecase"
 
 # passwords
 set $passmenu passmenu

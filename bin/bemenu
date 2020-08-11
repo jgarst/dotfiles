@@ -1,7 +1,7 @@
-#! /usr/bin/env sh
+#!/usr/bin/env sh
 
-bemenu \
-  --ignorecase \
+# gruvbox colorscheme
+/usr/bin/bemenu \
   --prompt='' \
   --fn 'pango:IBM Plex Sans 24' \
   --line-height 52 \
