@@ -21,6 +21,8 @@ packages=(
     xdg-utils
     i3-wm
     i3status
+    bemenu
+    bemenu-x11
     pass
     brightnessctl
 )
