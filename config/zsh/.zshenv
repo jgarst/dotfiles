@@ -39,7 +39,7 @@ export CARGO_HOME=${XDG_DATA_HOME}/cargo
 export GNUPGHOME=${XDG_DATA_HOME}/gnupg
 
 export XINITRC=${XDG_CONFIG_HOME}/X11/xinitrc
-export XSERVERRC=${XDG_CONFIG_HOME}/X11/xserverrc
+# export XSERVERRC=${XDG_CONFIG_HOME}/X11/xserverrc
 
 export PSQLRC=${XDG_CONFIG_HOME}/pg/psqlrc
 export PSQL_HISTORY=${XDG_CACHE_HOME}/pg/psql_history
@@ -61,3 +61,5 @@ export GEM_SPEC_CACHE=${XDG_CACHE_HOME}/gem
 export XAUTHORITY=${XDG_DATA_HOME}/xorg/Xauthority
 
 export LESSHISTFILE=/dev/null
+
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
