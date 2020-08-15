@@ -10,4 +10,6 @@ setxkbmap -option caps:escape
 [ -f /etc/xprofile ] && . /etc/xprofile
 [ -f ~/.xprofile ] && . ~/.xprofile
 
+xrandr --dpi 192
+
 exec i3

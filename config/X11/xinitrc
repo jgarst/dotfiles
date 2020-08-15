@@ -1,4 +1,4 @@
-xrdb ${XDG_CONFIG_HOME}/X11/Xresources
+xrdb -merge ${XDG_CONFIG_HOME}/X11/Xresources
 
 # sets capslock <--> escape
 # does not work with escapeless apple keyboard
@@ -10,10 +10,6 @@ setxkbmap -option caps:escape
 [ -f /etc/xprofile ] && . /etc/xprofile
 [ -f ~/.xprofile ] && . ~/.xprofile
 
-
-xrandr --newmode "3840x2160_60.00"  712.75  3840 4160 4576 5312  2160 2163 2168 2237 -hsync +vsync
-xrandr --addmode eDP-1 3840x2160_60.00
-xrandr --output eDP-1 --mode 3840x2160_60.00
 xrandr --dpi 192
 
 exec i3
