@@ -1,0 +1,18 @@
+pkgname=jared-xdg-vars
+pkgver=1
+pkgrel=1
+pkgdesc="Global definitions for XDG environment variables that are not hidden"
+arch=('any')
+source=(
+    zshenv
+    50-xdg.sh
+)
+md5sums=(
+  'e31cb011cbb1d011eb11694690e8c121'
+  '4f9e614f801bb85234ab83a2e3727772'
+)
+
+package() {
+    install -D zshenv "${pkgdir}/etc/zsh/zshenv"
+    install -D 50-xdg.sh "${pkgdir}/usr/lib/systemd/user-environment-generators/50-xdg.sh"
+}
