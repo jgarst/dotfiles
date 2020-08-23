@@ -1,5 +1,10 @@
 #! /usr/bin/env bash
 
+make -C packages jared.db
+doas pacman -Scc
+doas pacman -Syy
+
+
 packages=(
     base
     base-devel
@@ -54,7 +59,12 @@ aurs=(
     youtube-dl
 )
 
-doas pikaur -S --needed "${packages[@]}" "${sound[@]}" "${x11[@]}"
+jared=(
+    jared-xdg-vars
+)
+
+doas pikaur -S --needed "${packages[@]}" "${sound[@]}" "${x11[@]}" 
+doas pacman -S --needed "${jared[@]}"
 
 mandb
 
