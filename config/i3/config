@@ -207,7 +207,7 @@ bindsym XF86AudioPlay exec xmms2 toggle
 bindsym XF86AudioNext exec xmms2 next
 bindsym XF86AudioPrev exec xmms2 prev
 
-bindsym --release Print exec maim -s | xclip -t image/png
+bindsym --release Print exec maim -s | xclip -selection clipboard -t image/png
 
 
 ##############
