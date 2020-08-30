@@ -1,0 +1,30 @@
+#! /usr/bin/env bash
+txt=$(xwininfo)
+
+corner=$( echo "${txt}" \
+        | grep -e Corner \
+        | sed 's/^.*Corners://' \
+        | awk '{print $1}' \
+        | sed 's/\(+[0-9]*\)+/\1,/' \
+        )
+
+width=$( echo "${txt}" \
+       | grep -e Width \
+       | sed 's/^.*Width://' \
+       | awk '{print $1}' \
+       )
+
+height=$( echo "${txt}" \
+        | grep -e Height \
+        | sed 's/^.*Height://' \
+        | awk '{print $1}'
+        )
+
+exec ffmpeg \
+    -f x11grab \
+    -s "${width}"x"${height}" \
+    -i :0.0"${corner}" \
+    -an \
+    -threads 0 \
+    -f gif \
+    "${HOME}"/Downloads/recording.gif
