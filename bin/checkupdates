@@ -1,5 +1,22 @@
 #! /usr/bin/env sh
 
+# XXX: This is hard to keep in sync with the location of the local database
+# XXX: I don't think the pacman configuration file can read environment
+# XXX: though, which prevents parameterizing the location.
+# XXX: Next step might be dhall?
+
+if test -f "${XDG_CONFIG_HOME}"/packages/jared.db
+then
+    pikaur -Syu
+else
+    printf "could not find local database %s\n" \
+        "${XDG_CONFIG_HOME}/packages/jared.db"
+    printf "run \`make jared.db\` in %s\n" \
+        "${XDG_CONFIG_HOME}/packages"
+    exit 1
+fi
+
+
 if [ -x "$(command -v pikaur)" ]
 then
     /usr/bin/checkupdates ; pikaur -Qua 2>/dev/null
