@@ -11,6 +11,7 @@ packages=(
     linux
     linux-firmware
     udisks2
+    xterm
     neovim
     git
     git-lfs

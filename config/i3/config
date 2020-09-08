@@ -25,7 +25,7 @@ set $down j
 set $up k
 set $right l
 
-set $term alacritty
+set $term xterm
 font pango:IBM Plex Sans 12
 
 #############

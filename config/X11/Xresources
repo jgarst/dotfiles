@@ -1,1 +1,4 @@
 Xft.dpi: 192
+
+XTerm.termName: xterm-256-color
+XTerm.vt100.faceName: IBM Plex Mono:size=12
