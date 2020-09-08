@@ -109,14 +109,6 @@ set hlsearch  " highlight searches
 " tab, trailing white space, non breaking space, end of line, line continuation
 set list listchars=tab:│\ ,trail:·,nbsp:·,eol:¬,precedes:«,extends:»
 
-" gruvbox color scheme
-set termguicolors
-" for tmux ???
-let &t_8f="[38;2;%lu;%lu;%lum"
-let &t_8b="[48;2;%lu;%lu;%lum"
-let g:gruvbox_italic=1
-colorscheme gruvbox
-
 " smart line breaking
 set linebreak
 

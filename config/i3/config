@@ -3,18 +3,6 @@
 # Variables #
 #############
 
-# gruvbox colorscheme
-set $bg #282828
-set $fg #ebdbb2
-set $red #cc241d
-set $green #98971a
-set $yellow #d79921
-set $blue #458588
-set $purple #b16286
-set $aqua #689d68
-set $gray #a89984
-set $darkgray #928374
-
 # Logo key
 set $mod Mod4
 # Alt key # set $mod Mod1
@@ -27,6 +15,7 @@ set $right l
 
 set $term xterm
 font pango:IBM Plex Sans 12
+
 
 #############
 # Launchers #
@@ -52,16 +41,27 @@ bar
     font pango:IBM Plex Sans 12
     colors
     {
-        background $bg
-        statusline $fg
+        background #1D1F21
+        statusline #C5C8C6
+        separator  #373B41
 
-    #   workspaces           border  backgr  text
-        focused_workspace    $aqua   $bg     $fg
-        inactive_workspace   $bg     $bg     $fg
-        active_workspace     $bg     $bg     $fg
-        urgent_workspace     $red    $red    $bg
+        focused_workspace  #003F8E #002451 #FFFFFF
+        active_workspace   #282A2E #1D1F21 #C5C8C6
+        inactive_workspace #393939 #2D2D2D #999999
+        urgent_workspace   #373B41 #CC6666 #000000
+        binding_mode       #373B41 #CC6666 #000000
     }
 }
+################
+# Color Scheme #
+################
+
+# class                 border  bground text    indicator child_border
+client.focused          #003F8E #002451 #FFFFFF #003F8E   #002451
+client.focused_inactive #282A2E #1D1F21 #C5C8C6 #373B41   #1D1F21
+client.unfocused        #393939 #2D2D2D #999999 #515151   #2D2D2D
+client.urgent           #373B41 #CC6666 #000000 #CC6666   #CC6666
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 
 
 ################
