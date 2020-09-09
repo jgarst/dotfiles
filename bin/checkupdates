@@ -5,10 +5,8 @@
 # XXX: though, which prevents parameterizing the location.
 # XXX: Next step might be dhall?
 
-if test -f "${XDG_CONFIG_HOME}"/packages/jared.db
+if test ! -f "${XDG_CONFIG_HOME}"/packages/jared.db
 then
-    pikaur -Syu
-else
     printf "could not find local database %s\n" \
         "${XDG_CONFIG_HOME}/packages/jared.db"
     printf "run \`make jared.db\` in %s\n" \
