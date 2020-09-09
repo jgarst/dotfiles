@@ -142,10 +142,10 @@ bindsym $mod+Shift+0 move container to workspace 10
 ##########
 
 # create new windows horizontally
-bindsym $mod+b splith
+bindsym $mod+t splith
 
 # create new windows vertically
-bindsym $mod+v splitv
+bindsym $mod+y splitv
 
 # workspace layout modes
 bindsym $mod+s layout stacking

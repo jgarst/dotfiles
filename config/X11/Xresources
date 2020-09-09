@@ -3,6 +3,11 @@ Xft.dpi: 192
 XTerm.termName: xterm-256-color
 XTerm.vt100.faceName: IBM Plex Mono:size=12
 
+XTerm.vt100.selectToClipboard: true
+XTerm*vt100.translations: #override \n\
+    Mod4 <Key> C: copy-selection(CLIPBOARD) \n\
+    Mod4 <Key> V: insert-selection(CLIPBOARD)
+
 
 ! Tomorrow Night Bright
 #define t_background        #000000
