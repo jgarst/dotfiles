@@ -1,0 +1,6 @@
+In addition to the steps on the Arch Wiki
+
+1. Remember to also install ghostscript
+2. The printer ip address is on the test page it prints
+3. The uri for the ipp protocol is ipp://<ip-address>/ipp
+4. The model (driver) for the ipp protocol is universal.  The command for setting up the queue is `lpadmin -p <queue_name> -E -v <uri> -m everywhere`
