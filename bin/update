@@ -37,7 +37,8 @@ fi
 
 if [ -x "$(command -v fwupdmgr)" ]
 then
-    fwupdmgr refresh && fwupdmgr get-updates
+    fwupdmgr refresh
+    fwupdmgr get-updates
 fi
 
 if [ -x "$(command -v bat)" ]
