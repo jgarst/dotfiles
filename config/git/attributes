@@ -1,4 +1,50 @@
 
-*.ipynb	diff=jupyternotebook
+*.ipynb     diff=jupyternotebook
+*.ipynb     merge=jupyternotebook
 
-*.ipynb	merge=jupyternotebook
+# diff hunks include the name of the enclosing context for the change.
+# There are a number of builtin syntaxes for finding the name of the outer
+# context, but the git user must map extensions to syntaxes for this manually.
+
+*.py        diff=python
+
+*.rb        diff=ruby
+*.rake      diff=ruby
+
+*.c         diff=cpp
+*.h         diff=cpp
+*.c++       diff=cpp
+*.h++       diff=cpp
+*.cpp       diff=cpp
+*.hpp       diff=cpp
+*.cc        diff=cpp
+*.hh        diff=cpp
+
+*.m         diff=objc
+*.mm        diff=objc
+
+*.cs        diff=csharp
+
+*.css       diff=css
+
+*.html      diff=html
+*.xhtml     diff=html
+
+*.ex        diff=elixer
+*.exs       diff=elixer
+
+*.go        diff=golang
+
+*.php       diff=php
+
+*.pl        diff=perl
+
+*.md        diff=markdown
+
+*.rs        diff=rust
+
+*.lisp      diff=lisp
+*.el        diff=lisp
+
+# There are also builtin syntaxes for `ada`, `tex`, `bibtex`, `fortran`, `java`, 
+# `matlab`, `pascal`
