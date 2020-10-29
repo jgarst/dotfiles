@@ -16,6 +16,12 @@ set runtimepath=$XDG_CONFIG_HOME/vim
     \,$VIMRUNTIME
     \,/usr/share/vim/vimfiles
 
+" Copy to the default CLIPBOARD buffer in X.
+" The default `vim` package at arch does not support this.
+" Install the `gvim` package or use the herecura repository.
+" https://wiki.archlinux.org/index.php/Vim#Installation
+set clipboard=unnamedplus
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color Scheme and Syntax
@@ -151,9 +157,6 @@ syn match AcronymNoSpell '\<\(\u\|\d\)\{2,}s\?\>' contains=@NoSpell
 
 " do not complain about lower case in git commits
 autocmd FileType gitcommit setlocal spellcapcheck=
-
-" have yanking use system clipboard
-set clipboard=unnamedplus
 
 
 function! RestoreCursor()
