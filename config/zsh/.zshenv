@@ -70,8 +70,10 @@ export QT_AUTO_SCREEN_SCALE_FACTOR=1
 read -r -d '' VIMINIT <<-'EOF'
     if !has("nvim")
         let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc"
-    source $MYVIMRC
+    else
+        let $MYVIMRC="$XDG_CONFIG_HOME/nvim/init.vim"
     endif
+    source $MYVIMRC
 EOF
 
 export VIMINIT=$VIMINIT
