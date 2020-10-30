@@ -10,6 +10,7 @@ set nocompatible
 set directory=$XDG_CACHE_HOME/vim,~/,/tmp
 set backupdir=$XDG_CACHE_HOME/vim,~/,/tmp
 set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
+set packpath=$XDG_CONFIG_HOME/vim
 set runtimepath=$XDG_CONFIG_HOME/vim
     \,$XDG_CONFIG_HOME/vim/after
     \,$VIM
@@ -33,20 +34,59 @@ colorscheme harlequin
 " =============================================================================
 " Completion
 " =============================================================================
+" I use the mucomplete plugin, because native vim completion uses more chords
+" than I can keep in my head, and I haven't been able to wrap my head around
+" YouCompleteMe.
 
-" For simple completion, CTRL_n/CTRL_p will search
+" `menu` and `menuone` creates suggestion menu that can use mucomplete's
+" fallback scheme.  `noinsert` allows mucomplete to perform autocompletion.
+" `popup` uses the newer and more extensible `popup` window feature as opposed
+" to the older preview windows, though I don't know what that means.
+set completeopt=menu,menuone,noinsert,popup
+
+" Disable autocompletion messages.  Hopefully the result should be apparent
+" enough without helpful explanatory text.
+set shortmess+=c
+
+" Automatically pop up suggested completions after a 3 second  pause.
+let g:mucomplete#enable_auto_at_startup = 1
+let g:mucomplete#completion_delay = 3000
+
+" Mucomplete has a slightly smarter mode of path completion, that can search
+" for paths relative to the current buffer and not `pwd`.
+let g:mucomplete#buffer_relative_paths = 1
+
+" Choose capitalization of inserted words based on context
+set ignorecase  "also causes search patterns to ignore capitalization
+set infercase
+
+" The priority for completion engines
+" 1) files
+" 2) omnicompletion
+" 3) backwards in the current file
+" 4) forward in the current file
+" 5) ctags
+" 6) default completion backwards and forwards (see below)
+" 6) dictionary words
+" 7) spelling correction
+let g:mucomplete#chains = {
+\     "default": [
+\       "path", "omni", "keyp", "keyn", "tags", "c-p", "c-n", "dict", "uspl"
+\     ]
+\   , "markdown": ["keyp", "keyn", "dict", "uspl"]
+\ }
+
+" files searched in the c-p/c-n completion engine.
 " 1) The current buffer
 " 2) Buffers in other windows
 " 3) Other loaded buffers
 " 4) Unloaded buffers
-" 5) Tags
-" 6) Included files
-" 7) The active spell checking dictionary, when spell checking is enabled
+" 5) Buffers not in the buffer list
 
-" Some people (tim pope, emilyst) remove the search through included files,
-" with a comment that it can be slow.
+" included files, ctags, and spelling are potentially large and latent, so I
+" have broken them out into their own mucomplete engines where I want them.
+set complete=.,w,b,u,U
 
-set complete=.,w,b,u,t,i,kspell
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Filesystem
