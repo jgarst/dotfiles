@@ -31,6 +31,7 @@ packages=(
     bemenu-x11
     pass
     brightnessctl
+    bolt
 )
 # rclone?
 
