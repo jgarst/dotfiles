@@ -1,0 +1,17 @@
+[python]
+# conditional ( ... ) string shows the environment only when it is active
+format = '([python via](cyan) [$virtualenv](yellow bold)) '
+pyenv_version_name = false
+scan_for_pyfiles = false
+python_binary = "python"
+disabled = false
+
+
+[ruby]
+# visible when the directory contains a Gemfile, .ruby-version, or .rb files
+format = '[ruby](cyan) [$version](bold red) '
+
+
+[nodejs]
+# visible when the directory contains node_modules/ or {.js,.mjs,.cjs,.ts} files
+format = '[node](cyan) [$version](bold green) '

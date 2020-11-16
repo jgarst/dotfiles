@@ -64,6 +64,9 @@ export LESSHISTFILE=/dev/null
 
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 
+export STARSHIP_CONFIG=${XDG_CONFIG_HOME}/starship/config.toml
+export STARSHIP_CACHE=${XDG_CACHE_HOME}/starship/
+
 # The VIMINIT variable is used as a vim ex command when starting.
 # Here I use it to find and use a vim configuration file in an XDG compatible
 # location.  This is only done for vim, as neovim is alredy XDG compatible
