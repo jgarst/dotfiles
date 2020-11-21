@@ -59,6 +59,7 @@ wayland=(
 aurs=(
     zoom
     youtube-dl
+    visual-studio-code-bin
 )
 
 jared=(
