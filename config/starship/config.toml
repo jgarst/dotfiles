@@ -15,3 +15,7 @@ format = '[ruby](cyan) [$version](bold red) '
 [nodejs]
 # visible when the directory contains node_modules/ or {.js,.mjs,.cjs,.ts} files
 format = '[node](cyan) [$version](bold green) '
+
+
+[battery]
+disabled = true
