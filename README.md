@@ -12,11 +12,19 @@ This is a record of Jared's personal configuration files.  They come with some i
 
 Color Scheme
 ============
-I am using the [Tomorrow Night theme](https://github.com/ChrisKempson/Tomorrow-Theme) and its variations. More specifically
-* Tomorrow Night Bright for terminals and text editors.
+My color scheme is transitioning from the [Tomorrow Night theme](https://github.com/ChrisKempson/Tomorrow-Theme) to a hodge podge of themes based around [harlequin](https://github.com/nielsmadan/harlequin) and Monokai.
+Tomorrow Night is probably still my favorite theme, but I like the warm colors popping comments of harlequin when writing code.
+I find it a little more relaxing to read, and agree with its contrast choices.
+Because the terminal and other color signals have less context and structure than a programming language, I want their colors to be brighter have more contrast than harlequin.
+I have chosen Monokai for these uses, as it has an overall temperature pretty close to harlequin, but tends to be brighter, and has more variations in the wild I can steal from.
+The Colors I currently have set are:
+* harlequin for vim and other text editing
+* Monokai Soda, with the background adjusted to match harlequin for terminals and text editors.
 * Tomorrow Night Blue for focused window manager components.
 * Tomorrow Night for focused but inactive window manager components, for example the focused window on an inactive monitor screen.
 * Tomorrow Night Eighties for unfocused window manager components.
+
+I hope to replace the Tomorrow Night components when I get a chance.
 
 
 Tools

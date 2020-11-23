@@ -1,0 +1,50 @@
+! Tomorrow Night Bright
+#define t_background        #000000
+#define t_current_line      #2a2a2a
+#define t_selection      	#424242
+#define t_foreground      	#eaeaea
+#define t_comment	     	#969896
+#define t_red		     	#d54e53
+#define t_orange	     	#e78c45
+#define t_yellow        	#e7c547
+#define t_green	        	#b9ca4a
+#define t_aqua	        	#70c0b1
+#define t_blue	        	#7aa6da
+#define t_purple        	#c397d8
+
+
+XTerm.vt100.foreground:   t_foreground
+XTerm.vt100.background:   t_background
+XTerm.vt100.cursorColor:  #aeafad
+
+! Black / Grey
+XTerm.vt100.color0:       #000000
+XTerm.vt100.color8:       #666666
+
+! Red / Bright Red
+XTerm.vt100.color1:       t_red
+XTerm.vt100.color9:       #FF3334
+
+! Green + Bright Green
+XTerm.vt100.color2:       t_green
+XTerm.vt100.color10:      #9ec400
+
+! Yellow (Orange) + Bright Yellow (Yellow)
+XTerm.vt100.color3:       t_orange
+XTerm.vt100.color11:      t_yellow
+
+! Blue + Bright Blue
+XTerm.vt100.color4:       t_blue
+XTerm.vt100.color12:      t_blue
+
+! Magenta (Purple) + Bright Magenta
+XTerm.vt100.color5:       t_purple
+XTerm.vt100.color13:      #b777e0
+
+! Cyan (Aqua) + Bright Cyan
+XTerm.vt100.color6:       t_aqua
+XTerm.vt100.color14:      #54ced6
+
+! Light Grey (Selection) + White (Current Line)
+XTerm.vt100.color7:       t_selection
+XTerm.vt100.color15:      t_current_line
