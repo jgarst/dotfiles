@@ -18,7 +18,8 @@ I find it a little more relaxing to read, and agree with its contrast choices.
 Because the terminal and other color signals have less context and structure than a programming language, I want their colors to be brighter have more contrast than harlequin.
 I have chosen Monokai for these uses, as it has an overall temperature pretty close to harlequin, but tends to be brighter, and has more variations in the wild I can steal from.
 The Colors I currently have set are:
-* harlequin for vim and other text editing
+* harlequin for vim and other text editing.
+* Monokai for command line printing with bat, until I can recreate harlequin in tmTheme format.
 * Monokai Soda, with the background adjusted to match harlequin for terminals and text editors.
 * Tomorrow Night Blue for focused window manager components.
 * Tomorrow Night for focused but inactive window manager components, for example the focused window on an inactive monitor screen.
