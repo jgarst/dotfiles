@@ -47,33 +47,69 @@ debug:
   render_timer: false
 
 # Colors (Gruvbox light)
-colors:
+# colors:
   # Default colors
-  primary:
-    background: "0xfbf1c7"
-    foreground: "0x3c3836"
+#  primary:
+#    background: "0xfbf1c7"
+#    foreground: "0x3c3836"
 
   # Normal colors
-  normal:
-    black: "0xfbf1c7"
-    red: "0xcc241d"
-    green: "0x98971a"
-    yellow: "0xd79921"
-    blue: "0x458588"
-    magenta: "0xb16286"
-    cyan: "0x689d6a"
-    white: "0x7c6f64"
+#  normal:
+#    black: "0xfbf1c7"
+#    red: "0xcc241d"
+#    green: "0x98971a"
+#    yellow: "0xd79921"
+#    blue: "0x458588"
+#    magenta: "0xb16286"
+#    cyan: "0x689d6a"
+#    white: "0x7c6f64"
 
   # Bright colors
+#  bright:
+#    black: "0x928374"
+#    red: "0x9d0006"
+#    green: "0x79740e"
+#    yellow: "0xb57614"
+#    blue: "0x076678"
+#    magenta: "0x8f3f71"
+#    cyan: "0x427b58"
+#    white: "0x3c3836"
+
+# Colors (Monokai Soda)
+# The background color has been tweaked from #1a1a1a to #1c1b1a to exactly
+# match the harlequin vim colorscheme
+colors:
   bright:
-    black: "0x928374"
-    red: "0x9d0006"
-    green: "0x79740e"
-    yellow: "0xb57614"
-    blue: "0x076678"
-    magenta: "0x8f3f71"
-    cyan: "0x427b58"
-    white: "0x3c3836"
+    black: '#625e4c'
+    blue: '#9d65ff'
+    cyan: '#58d1eb'
+    green: '#98e024'
+    magenta: '#f4005f'
+    red: '#f4005f'
+    white: '#f6f6ef'
+    yellow: '#e0d561'
+
+  cursor:
+    cursor: '#f6f7ec'
+    text: '#c4c5b5'
+
+  normal:
+    black: '#1a1a1a'
+    blue: '#9d65ff'
+    cyan: '#58d1eb'
+    green: '#98e024'
+    magenta: '#f4005f'
+    red: '#f4005f'
+    white: '#c4c5b5'
+    yellow: '#fa8419'
+
+  primary:
+    background: '#1c1b1a'
+    foreground: '#c4c5b5'
+
+  selection:
+    background: '#343434'
+    text: '#c4c5b5'
 
 # Visual Bell
 #
