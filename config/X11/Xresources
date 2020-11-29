@@ -10,6 +10,8 @@ XTerm*vt100.translations: #override \n\
 
 
 ! Monokai Soda from https://github.com/mbadolato/iTerm2-Color-Schemes
+! The background color has been changed from #1a1a1a to #1c1b1a to exactly 
+! match the harlequin vim colorscheme
 XTerm.vt100.foreground:  #c4c5b5
 XTerm.vt100.background:  #1c1b1a
 XTerm.vt100.cursorColor: #f6f7ec
