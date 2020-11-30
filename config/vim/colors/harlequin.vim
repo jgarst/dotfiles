@@ -164,12 +164,10 @@ call s:Highlight('VertSplit',       s:greys[1], s:greys[5], 'bold', '')
 
 call s:Highlight('ModeMsg',         s:sunny, '', 'bold', '')
 
-if has("spell")
-    call s:HighlightX('SpellBad',    '', '', 'undercurl', s:mordant)
-    call s:HighlightX('SpellCap',    '', '', 'undercurl', s:auburn)
-    call s:HighlightX('SpellLocal',  '', '', 'undercurl', s:auburn)
-    call s:HighlightX('SpellRare',   '', '', 'undercurl', s:white)
-endif
+hi SpellBad   guibg=#1C1B1A cterm=undercurl gui=undercurl ctermul=124 guisp=#AE0C00
+hi SpellCap   guibg=#1C1B1A cterm=undercurl gui=undercurl ctermul=88 guisp=#7C0A02
+hi SpellLocal guibg=#1C1B1A cterm=undercurl gui=undercurl ctermul=88 guisp=#7C0A02
+hi SpellRare  guibg=#1C1B1A cterm=undercurl gui=undercurl ctermul=15 guisp=#FFFFFF
 
 call s:HighlightX('VisualNOS',      '', s:greys[4], '', '')
 call s:HighlightX('Visual',         '', s:greys[4], '', '')
