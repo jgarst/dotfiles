@@ -1,6 +1,6 @@
 Xft.dpi: 192
 
-XTerm.termName: xterm-256-color
+XTerm.termName: xterm-256color
 XTerm.vt100.faceName: IBM Plex Mono:size=12
 
 XTerm.vt100.selectToClipboard: true
