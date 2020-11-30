@@ -23,6 +23,17 @@ set runtimepath=$XDG_CONFIG_HOME/vim
 " https://wiki.archlinux.org/index.php/Vim#Installation
 set clipboard=unnamedplus
 
+" There is no source of truth for which terminals have which capabilities,
+" and users lie about their terminals all the time, so vim does not do a good
+" job of enabling features where possible and falling back where not.
+
+" Because of this gap, I sometimes hardcode fallback behavior for terminals
+" that do not have certain features.  Xterm can not do undercurl, so I replace
+" those terminal escape codes with the escape codes to underline.
+if &term == 'xterm-256color'
+    let &t_Cs = "\e[4m"
+    let &t_Ce = "\e[24m"
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color Scheme and Syntax
