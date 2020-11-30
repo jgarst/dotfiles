@@ -1,0 +1,14 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = Removing all but the most recent cache of uninstalled AUR packages.
+Depends = zsh
+Depends = pacman-contrib
+When = PostTransaction
+Exec = /usr/bin/zsh -c '/usr/bin/paccache --cachedir /home/jared/cache/pikaur/pkg --verbose --remove --keep 1'
+
