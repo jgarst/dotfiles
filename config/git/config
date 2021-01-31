@@ -61,3 +61,5 @@
     path = ~/home.gitconfig
 [pull]
 	ff = only
+[init]
+	defaultBranch = main
