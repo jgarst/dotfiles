@@ -19,6 +19,7 @@
 	conflictstyle = diff3
 [core]
 	editor = vim
+    pager = delta
 [rebase]
 	autosquash = true
 [mergetool]

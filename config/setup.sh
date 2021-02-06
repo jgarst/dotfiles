@@ -60,6 +60,7 @@ aurs=(
     zoom
     youtube-dl
     visual-studio-code-bin
+    git-delta
 )
 
 jared=(
