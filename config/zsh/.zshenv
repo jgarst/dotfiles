@@ -21,7 +21,6 @@ export EDITOR=nvim
 export GOPATH=${HOME}/go
 export BROWSER=/usr/bin/firefox
 
-export PATH=${HOME}/bin:${PATH}
 export PYTHONPATH=${HOME}/lib/python
 export IPYTHONDIR=${XDG_DATA_HOME}/ipython
 export JUPYTER_CONFIG_DIR=${XDG_DATA_HOME}/jupyter
@@ -57,6 +56,10 @@ export BUNDLE_USER_CACHE=${XDG_CACHE_HOME}/bundle
 export BUNDLE_USER_PLUGIN=${XDG_DATA_HOME}/bundle
 
 export GEM_SPEC_CACHE=${XDG_CACHE_HOME}/gem
+
+export PYENV_ROOT=${XDG_DATA_HOME}/pyenv
+
+export PATH=${PYENV_ROOT}/bin:${HOME}/bin:${PATH}
 
 export XAUTHORITY=${XDG_DATA_HOME}/xorg/Xauthority
 
