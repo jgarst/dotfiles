@@ -6,3 +6,6 @@ set softtabstop=4
 
 " ruler at 81 characters
 set colorcolumn=81
+
+let b:ale_fixers = ['black']
+let b:ale_fix_on_save = 1
