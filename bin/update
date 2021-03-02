@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 set -uf
-
+PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
 # XXX: This is hard to keep in sync with the location of the local database
 # XXX: I don't think the pacman configuration file can read environment
 # XXX: though, which prevents parameterizing the location.
