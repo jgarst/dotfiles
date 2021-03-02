@@ -1,6 +1,12 @@
 #! /usr/bin/env bash
 set -uf
 
+# XXX: I am shadowing common commands to use settings that are more appropriate
+# XXX: for the command line.  This breaks anything that uses those commands.
+# XXX: The bad workaround is to set path to not include these customized
+# XXX: commands.  I need to figure out a better way.
+PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
+
 # XXX: This is hard to keep in sync with the location of the local database
 # XXX: I don't think the pacman configuration file can read environment
 # XXX: though, which prevents parameterizing the location.
@@ -46,4 +52,4 @@ then
     (cd / && bat cache --build)
 fi
 
-home submodule update --init --remote --rebase
+"${HOME}/bin/home" submodule update --init --remote --rebase
