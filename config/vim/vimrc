@@ -59,6 +59,9 @@ set completeopt=menu,menuone,noinsert,popup
 " enough without helpful explanatory text.
 set shortmess+=c
 
+set belloff+=ctrlg  " Turn off bell during completion
+
+
 " Automatically pop up suggested completions after a 3 second  pause.
 let g:mucomplete#enable_auto_at_startup = 1
 let g:mucomplete#completion_delay = 3000
