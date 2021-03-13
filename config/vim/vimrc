@@ -33,6 +33,11 @@ set clipboard=unnamedplus
 if &term == 'xterm-256color'
     let &t_Cs = "\e[4m"
     let &t_Ce = "\e[24m"
+elseif &term == 'alacritty'
+    let &t_Cs = "\e[4m"
+    let &t_Ce = "\e[24m"
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
