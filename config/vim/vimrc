@@ -17,6 +17,9 @@ set runtimepath=$XDG_CONFIG_HOME/vim
     \,$VIMRUNTIME
     \,/usr/share/vim/vimfiles
 
+" allow per filetype indentation scripts
+filetype plugin indent on
+
 " Copy to the default CLIPBOARD buffer in X.
 " The default `vim` package at arch does not support this.
 " Install the `gvim` package or use the herecura repository.

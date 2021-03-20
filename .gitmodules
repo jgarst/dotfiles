@@ -13,3 +13,6 @@
 [submodule "config/vim/pack/default/vim-surround"]
 	path = config/vim/pack/default/vim-surround
 	url = git@github.com:tpope/vim-surround.git
+[submodule "config/vim/pack/default/indentpython"]
+	path = config/vim/pack/default/indentpython
+	url = git@github.com:vim-scripts/indentpython.vim.git
