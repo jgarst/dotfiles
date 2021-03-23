@@ -53,3 +53,5 @@ then
 fi
 
 "${HOME}/bin/home" submodule update --init --remote --rebase
+
+npm update -g

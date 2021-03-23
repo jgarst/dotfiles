@@ -76,3 +76,8 @@ bat cache --build
 
 mkdir "${XDG_CONFIG_HOME}"/rclone
 pass rclone_conf > "${XDG_CONFIG_HOME}"/rclone
+
+npm install -g \
+    eslint-config-standard \
+    @typescript-eslint/eslint-plugin \
+    @typescript-eslint/parser

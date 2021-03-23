@@ -59,7 +59,7 @@ export GEM_SPEC_CACHE=${XDG_CACHE_HOME}/gem
 
 export PYENV_ROOT=${XDG_DATA_HOME}/pyenv
 
-export PATH=${PYENV_ROOT}/bin:${HOME}/bin:${PATH}
+export PATH=${PYENV_ROOT}/bin:${HOME}/bin:${XDG_DATA_HOME}/node_modules/bin:${PATH}
 
 export XAUTHORITY=${XDG_DATA_HOME}/xorg/Xauthority
 
@@ -71,6 +71,8 @@ export STARSHIP_CONFIG=${XDG_CONFIG_HOME}/starship/config.toml
 export STARSHIP_CACHE=${XDG_CACHE_HOME}/starship/
 
 export VSCODE_PORTABLE="${XDG_CONFIG_HOME}"/vscode
+
+export NPM_CONFIG_PREFIX="${XDG_DATA_HOME}"/node
 
 # The VIMINIT variable is used as a vim ex command when starting.
 # Here I use it to find and use a vim configuration file in an XDG compatible
