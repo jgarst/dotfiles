@@ -12,4 +12,11 @@ rules: {
   "no-var": "error",
   "prefer-const": "error",
   "guard-for-in": "error"
+  "no-restricted-globals": [
+    "error",
+    {
+      "name": "isNaN",
+      "message": "Use Number.isNaN instead"
+    }
+  ]
 }
