@@ -16,3 +16,6 @@
 [submodule "config/vim/pack/default/indentpython"]
 	path = config/vim/pack/default/indentpython
 	url = git@github.com:vim-scripts/indentpython.vim.git
+[submodule "config/vim/pack/default/tsuquyomi"]
+	path = config/vim/pack/default/tsuquyomi
+	url = git@github.com:Quramy/tsuquyomi.git

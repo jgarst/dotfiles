@@ -256,6 +256,9 @@ let g:ale_fixers = {
 
 let g:ale_sql_pgformatter_options = '-w 80'
 
+" Prefer vim-ale to Tsuquyomi for quickfix
+let g:tsuquyomi_disable_quickfix = 1
+
 " Use bash for shell commands
 set shell=/usr/bin/bash
 let $BASH_ENV = "$XDG_CONFIG_HOME/bash_aliases"
