@@ -18,5 +18,7 @@ rules: {
       "name": "isNaN",
       "message": "Use Number.isNaN instead"
     }
-  ]
+  ],
+  "space-before-function-paren": ["error", "never"],
+  "generator-star-spacing": ["error", {"before": false, "after": true}],
 }
