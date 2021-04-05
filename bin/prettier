@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+env NODE_PATH="${NPM_CONFIG_PREFIX}/lib/node_modules/:/usr/lib/node_modules/" \
+    /usr/bin/prettier \
+    --config "${XDG_CONFIG_HOME}/prettierrc.json" \
+    "$@"
