@@ -160,7 +160,7 @@ function! DiskReload()
 endfunction
 
 set autoread
-au BufEnter,FocusGained * call DiskReload()
+"au BufEnter,FocusGained * call DiskReload()
 autocmd FileChangedShellPost * 
   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 
@@ -263,14 +263,10 @@ let g:tsuquyomi_disable_quickfix = 1
 set shell=/usr/bin/bash
 let $BASH_ENV = "$XDG_CONFIG_HOME/bash_aliases"
 
-" w!! overwrites write protected file
-command W execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
-
 " textwidth of 72 for mutt emails
 au BufRead /tmp/mutt-* set tw=72
 
 set secure
-
 
 " w!! Writes with sudo permissions
 cnoremap w!! execute 'silent! write !sudo tee % > /dev/null' <bar> edit!
