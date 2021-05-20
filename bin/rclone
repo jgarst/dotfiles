@@ -1,0 +1,6 @@
+#! /usr/bin/env sh
+
+/usr/bin/rclone --dropbox-token "$(pass rclone/dropbox)"\
+    --progress \
+    --progress-terminal-title \
+    "$@"
