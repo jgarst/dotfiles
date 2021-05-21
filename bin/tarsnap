@@ -1,0 +1,4 @@
+#! /usr/bin/env sh
+
+/usr/bin/tarsnap --configfile "${XDG_CONFIG_HOME}/tarsnap.conf" "$@"
+
