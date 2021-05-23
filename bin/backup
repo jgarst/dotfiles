@@ -1,5 +1,9 @@
-#! /usr/bin/env sh
+#! /usr/bin/env bash
+set -eEuo pipefail
 
 ~/bin/tarsnap -c \
     -f "$(uname -n)-$(date +%Y-%m-%d_%H-%M-%S)" \
+    "$@" \
     -- /home/jared/*
+
+curl "https://nosnch.in/17cfb17473"
