@@ -11,11 +11,7 @@ set directory=$XDG_CACHE_HOME/vim,~/,/tmp
 set backupdir=$XDG_CACHE_HOME/vim,~/,/tmp
 set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
 set packpath=$XDG_CONFIG_HOME/vim
-set runtimepath=$XDG_CONFIG_HOME/vim
-    \,$XDG_CONFIG_HOME/vim/after
-    \,$VIM
-    \,$VIMRUNTIME
-    \,/usr/share/vim/vimfiles
+set runtimepath+=,$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after
 
 " allow per filetype indentation scripts
 filetype plugin indent on
@@ -270,3 +266,6 @@ set secure
 
 " w!! Writes with sudo permissions
 cnoremap w!! execute 'silent! write !sudo tee % > /dev/null' <bar> edit!
+
+" Jedi causes vim to hesitate for a moment. Disable automatic completion.
+let g:jedi#popup_on_dot = 0
