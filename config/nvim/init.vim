@@ -59,7 +59,8 @@ function! DiskReload()
 endfunction
 
 set autoread
-au BufEnter,FocusGained * call DiskReload()
+" bugged
+" au BufEnter,FocusGained * call DiskReload()
 autocmd FileChangedShellPost * 
   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 
