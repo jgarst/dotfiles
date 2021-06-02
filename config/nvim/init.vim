@@ -64,17 +64,6 @@ autocmd FileChangedShellPost *
   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 
 
-" file locations
-set directory=$XDG_CACHE_HOME/nvim,~/,/tmp
-set backupdir=$XDG_CACHE_HOME/nvim,~/,/tmp
-set viminfo+=n$XDG_CACHE_HOME/nvim/viminfo
-set runtimepath=$XDG_CONFIG_HOME/nvim
-    \,$XDG_CONFIG_HOME/nvim/after
-    \,$VIM
-    \,$VIMRUNTIME
-    \,/usr/share/nvim/vimfiles
-    \,/usr/share/vim/vimfiles
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tabs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
