@@ -32,6 +32,13 @@ eval "$(rbenv init -)"
 
 
 ###############################################################################
+# initialize rbenv
+#
+
+eval "$(atuin init zsh)"
+
+
+###############################################################################
 # command line nudges
 #
 # These utilities are functions so that they can communicate in the terminal,
