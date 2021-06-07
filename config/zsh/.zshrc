@@ -50,6 +50,13 @@ eval "$(atuin init zsh)"
 # without shadowing the python command.
 alias pyr='ptpython'
 
+# I want to modify some commands, but only when they are called from and
+# interactive shell.
+
+alias tsc='tsc --strict \
+    --noImplicitReturns \
+    --noFallthroughCasesInSwitch \
+    --noUnusedLocals'
 
 ###############################################################################
 # command line nudges

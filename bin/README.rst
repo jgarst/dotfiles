@@ -35,6 +35,12 @@ trust it's ability to keep safe any passwords I accidentally enter into history.
 
 
 
+
+tsc
+===
+I've aliased typescript to use strict defaults when called directly.
+
+
 ..
     I avoid aliasing my repl to py because Brett Cannon has claimed the name
     for his Python launcher.  https://github.com/brettcannon/python-launcher
