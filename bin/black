@@ -1,3 +1,0 @@
-#! /usr/bin/env sh
-
-/usr/bin/black --config "${XDG_CONFIG_HOME}/black.toml" "$@"
