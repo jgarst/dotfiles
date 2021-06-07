@@ -35,7 +35,14 @@ don't expect to have anything else consume the history file.
 I am not using Atuin's ability to sync history between machines, as I do not yet
 trust it's ability to keep safe any passwords I accidentally enter into history.
 
+.. _mpv-site: https://mpv.io/
 
+mpv (alias video)
+=================
+`mpv <mpv-site_>`__ is my preferred video player, I've aliased it to `video` and
+enabled whitelisted gpu acceleration by default.
+This is officially unwise, but in practice my inputs are basically always
+trusted, and my older machines are struggling to play videos without it.
 
 
 tsc

@@ -45,6 +45,7 @@ eval "$(atuin init zsh)"
 # For some utilities, I would like to use a command named after what it does.
 # This allows me to change the utility later without requiring me to update my
 # muscle memory.
+alias video='mpv'
 
 # pyr (python-repl) is an alias that lets me access a preferred python repl
 # without shadowing the python command.
@@ -67,12 +68,6 @@ alias rclone='rclone --dropbox-token "$(pass rclone/dropbox)"\
 # These utilities are functions so that they can communicate in the terminal,
 # but aren't exported to subprocesses
 
-
-function video
-# a remember of which tool is used for playing video
-{
-    >&2 printf 'Try \033[1mmpv\033[0m!\n'
-}
 
 function du
 # a nudge to use a cooler utility
