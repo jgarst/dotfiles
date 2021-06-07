@@ -39,6 +39,19 @@ eval "$(atuin init zsh)"
 
 
 ###############################################################################
+# Aliases
+#
+
+# For some utilities, I would like to use a command named after what it does.
+# This allows me to change the utility later without requiring me to update my
+# muscle memory.
+
+# pyr (python-repl) is an alias that lets me access a preferred python repl
+# without shadowing the python command.
+alias pyr='ptpython'
+
+
+###############################################################################
 # command line nudges
 #
 # These utilities are functions so that they can communicate in the terminal,

@@ -32,3 +32,11 @@ enough, I have had some problems with corruption of the history file, and I
 don't expect to have anything else consume the history file.
 I am not using Atuin's ability to sync history between machines, as I do not yet
 trust it's ability to keep safe any passwords I accidentally enter into history.
+
+
+ptpython
+========
+`ptpython <ptpython-site_>`__ combines prompt toolkit and jedi to create a
+nicer Python REPL.
+I alias ``ptpython`` to ``pyr``, so that I can set a default python REPL without
+shadowing ``python``.
