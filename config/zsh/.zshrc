@@ -57,6 +57,9 @@ alias tsc='tsc --strict \
     --noImplicitReturns \
     --noFallthroughCasesInSwitch \
     --noUnusedLocals'
+alias rclone='rclone --dropbox-token "$(pass rclone/dropbox)"\
+    --progress \
+    --progress-terminal-title'
 
 ###############################################################################
 # command line nudges

@@ -3,9 +3,11 @@ Tools
 =====
 
 
-rclone | `homepage <https://rclone.org/>`__
-===========================================
-A tool to manage multiple enterprise storage services.
+.. _rclone-site: https://rclone.org/
+
+rclone
+======
+`rclone <rclone-site_>`__ manages multiple enterprise storage services.
 For example, copy all media of one type from Google Drive to Dropbox,
 or sync a local folder to multiple services.
 
