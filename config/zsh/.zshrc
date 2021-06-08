@@ -46,6 +46,7 @@ eval "$(atuin init zsh)"
 # This allows me to change the utility later without requiring me to update my
 # muscle memory.
 alias video='mpv'
+alias top='htop'
 
 # pyr (python-repl) is an alias that lets me access a preferred python repl
 # without shadowing the python command.
@@ -73,15 +74,6 @@ function du
 # a nudge to use a cooler utility
 {
     >&2 printf 'Try using \033[1mdua]033m!\n'
-}
-
-function top
-{
-    # 2020-03-08
-    # htop is easier to read, and has nice IO monitoring.
-    # It also seems undermaintained, with one person committing, and one alpha
-    # release in 2018.  Replacements (ytop) look undercooked.
-    >&2 printf 'Try using \033[1mhtop\033[0m!\n'
 }
 
 

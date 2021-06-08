@@ -58,6 +58,15 @@ trusted, and my older machines are struggling to play videos without it.
 Aliased to ``video``.
 
 
+.. _htop-site: https://htop.dev/
+
+htop
+====
+`htop <htop-site_>`__ is an old reliable for inquires about resources, and seems
+to have found new maintainers.
+
+Aliased to ``top``.
+
 
 tsc
 ===
