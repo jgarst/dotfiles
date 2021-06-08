@@ -68,6 +68,16 @@ to have found new maintainers.
 Aliased to ``top``.
 
 
+.. _dust-site: https://github.com/bootandy/dust
+
+dust
+====
+`dust <dust-site_>`__ is a command line utility to present disk usage.
+I find it more usable than du.
+
+Aliased to ``du``.
+
+
 tsc
 ===
 I've aliased typescript to use strict defaults when called directly.

@@ -46,6 +46,7 @@ eval "$(atuin init zsh)"
 # This allows me to change the utility later without requiring me to update my
 # muscle memory.
 alias video='mpv'
+alias du='dust'
 alias top='htop'
 
 # pyr (python-repl) is an alias that lets me access a preferred python repl
@@ -62,19 +63,6 @@ alias tsc='tsc --strict \
 alias rclone='rclone --dropbox-token "$(pass rclone/dropbox)"\
     --progress \
     --progress-terminal-title'
-
-###############################################################################
-# command line nudges
-#
-# These utilities are functions so that they can communicate in the terminal,
-# but aren't exported to subprocesses
-
-
-function du
-# a nudge to use a cooler utility
-{
-    >&2 printf 'Try using \033[1mdua]033m!\n'
-}
 
 
 # From gary bernheardt's dotfiles
