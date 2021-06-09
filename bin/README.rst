@@ -89,6 +89,18 @@ into files is pretty nice.
 Aliased to ``cat``.
 
 
+.. _exa-site: https://the.exa.website/
+
+exa
+===
+`exa <exa-site_>`__ is a file lister and replacement for ls.
+I do not actually need to replace ls, and recognize that doing so is excessive,
+but exa is in the same vein as other rust tools that I am enjoying,
+and I am ok with making bad decisions on my personal computer.
+
+Aliased to ``ls``.
+
+
 tsc
 ===
 I've aliased typescript to use strict defaults when called directly.
