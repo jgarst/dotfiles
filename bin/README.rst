@@ -78,6 +78,17 @@ I find it more usable than du.
 Aliased to ``du``.
 
 
+.. _bat-site: https://github.com/sharkdp/bat
+
+bat
+===
+`bat <bat-site_>`__ is a pager and replacement for cat.
+Replacing cat is excessive, but having syntax highlighting when I am peeking
+into files is pretty nice.
+
+Aliased to ``cat``.
+
+
 tsc
 ===
 I've aliased typescript to use strict defaults when called directly.

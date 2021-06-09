@@ -20,9 +20,6 @@ typeset -U PATH path
 
 eval "$(starship init zsh)"
 
-alias ls=exa
-alias cat=bat
-
 
 ###############################################################################
 # initialize rbenv
@@ -48,6 +45,8 @@ eval "$(atuin init zsh)"
 alias video='mpv'
 alias du='dust'
 alias top='htop'
+alias cat='bat'
+alias ls='exa'
 
 # pyr (python-repl) is an alias that lets me access a preferred python repl
 # without shadowing the python command.
