@@ -53,9 +53,14 @@ alias locate='plocate'
 # without shadowing the python command.
 alias pyr='ptpython'
 
-# I want to modify some commands, but only when they are called from and
+# I want to modify some commands, but only when they are called from an
 # interactive shell.
-
+#
+# For example, when I use cp I always want the -i flag to prevent accidental
+# overwrites.
+# I do not want to change the behavior of cp when it is used in scripts.
+alias cp='cp -i'
+alias mv='mv -i'
 alias tsc='tsc --strict \
     --noImplicitReturns \
     --noFallthroughCasesInSwitch \
