@@ -101,6 +101,16 @@ and I am ok with making bad decisions on my personal computer.
 Aliased to ``ls``.
 
 
+.. _plocate-site: https://plocate.sesse.net/
+
+plocate
+=======
+`plocate <plocate-site_>`__ is a drop in locate replacement that claims to be faster.
+Faster locate is always nice.
+
+Aliased to ``locate``.
+
+
 tsc
 ===
 I've aliased typescript to use strict defaults when called directly.

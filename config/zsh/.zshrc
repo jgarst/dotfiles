@@ -47,6 +47,7 @@ alias du='dust'
 alias top='htop'
 alias cat='bat'
 alias ls='exa'
+alias locate='plocate'
 
 # pyr (python-repl) is an alias that lets me access a preferred python repl
 # without shadowing the python command.
