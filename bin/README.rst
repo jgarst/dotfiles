@@ -78,6 +78,16 @@ I find it more usable than du.
 Aliased to ``du``.
 
 
+.. _delta-site: https://github.com/dandavison/delta
+
+delta
+=====
+`delta <delta-site_>`__ is a diff presentation utility with nicer colors and language 
+specific highlighting.
+
+Aliased to ``diff`` and used in git configuration.
+
+
 .. _bat-site: https://github.com/sharkdp/bat
 
 bat
