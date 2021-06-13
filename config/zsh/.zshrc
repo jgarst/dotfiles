@@ -43,6 +43,7 @@ eval "$(atuin init zsh)"
 # This allows me to change the utility later without requiring me to update my
 # muscle memory.
 alias video='mpv'
+alias browser='firefox'
 alias du='dust'
 alias top='htop'
 alias cat='bat'
@@ -69,6 +70,12 @@ alias tsc='tsc --strict \
 alias rclone='rclone --dropbox-token "$(pass rclone/dropbox)"\
     --progress \
     --progress-terminal-title'
+
+# Nudges
+# For some commands, I would like to remind myself to use a different command.
+# The actual commands are still available through /usr/bin/<command>
+# Ideally, these reminders will eventually be removed.
+alias firefox='echo "use the browser command!"'
 
 
 # From gary bernheardt's dotfiles
