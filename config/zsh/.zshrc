@@ -29,10 +29,13 @@ eval "$(rbenv init -)"
 
 
 ###############################################################################
-# initialize rbenv
+# initialize atuin
 #
 
+export ATUIN_NOBIND="true"
 eval "$(atuin init zsh)"
+
+bindkey '^r' _atuin_search_widget
 
 
 ###############################################################################

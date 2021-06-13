@@ -43,7 +43,8 @@ don't expect to have anything else consume the history file.
 I am not using Atuin's ability to sync history between machines, as I do not yet
 trust it's ability to keep safe any passwords I accidentally enter into history.
 
-Bound to ``Ctrl - r`` and ``↑`` in the command prompt.
+Bound to ``Ctrl - r``.
+``↑`` remains bound to scroll through the file based history.
 
 
 .. _mpv-site: https://mpv.io/
