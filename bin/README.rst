@@ -151,3 +151,16 @@ unduly annoyed by the line limit of 88, and have set it to 80 by default for my
 personal projects, most of which are throw away.
 
 Vim formats on write with black.
+
+
+.. _cookiecutter-site: https://github.com/cookiecutter/cookiecutter
+
+cookiecutter
+============
+`cookiecutter <cookiecutter-site_>`__ creates project templates.
+I have one project setup that configures as many linters and tools as I know in
+very strict settings.
+When creating a new project, I run cookiecutter and then remove configuration
+and rules that I do not want or will not use by hand.
+I use this to make deliberate choices when starting a new project, and to write
+down my preferred configuration settings in one place.

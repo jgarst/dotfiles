@@ -21,4 +21,11 @@ rules: {
   ],
   "space-before-function-paren": ["error", "never"],
   "generator-star-spacing": ["error", {"before": false, "after": true}],
+  # Rules that require type level information want to be defined as part of
+  # a typescript project, with a tsconfig.json file, so that all project files
+  # can be parsed ahead of time.
+  #
+  # This excludes checking typescript rules in one off scripts, even when the
+  # rule would make sense in that context.  Check Issue #12 for context.
+  #"@typescript-eslint/return-await": ["error", "always"],
 }

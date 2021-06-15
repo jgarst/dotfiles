@@ -11,12 +11,15 @@ plugins:
 rules: {
   "no-var": "error",
   "prefer-const": "error",
-  "guard-for-in": "error"
+  "guard-for-in": "error",
   "no-restricted-globals": [
     "error",
     {
       "name": "isNaN",
       "message": "Use Number.isNaN instead"
     }
-  ]
+  ],
+  "space-before-function-paren": ["error", "never"],
+  "generator-star-spacing": ["error", {"before": false, "after": true}],
+  "@typescript-eslint/return-await": ["error", "always"],
 }
