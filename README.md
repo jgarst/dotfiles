@@ -41,3 +41,13 @@ Vim Plugins
 
 Add vim plugins, or other git submodules, with
 `home submodule add -f <repository> <relative/path/to/destination>
+
+
+Keyboard
+========
+I have used setxkbmap and xcape to change the behavior of a number of keys.
+* Caps Lock is Super (windows key) when held.  I use this in combination with keys in the hjkl region for system shortcuts, such as starting specific applications and moving windows.
+* Caps Lock is Escape when struck.  I use this frequently in vim.
+* Left Shift is ( when struck, a much shorter travel time than Shift + 9.
+* Right Shift is ) when struck, a much shorter travel time than Shift + 0.
+
