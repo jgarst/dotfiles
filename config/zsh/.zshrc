@@ -17,6 +17,8 @@ compinit
 # path array contains unique paths
 typeset -U PATH path
 
+# require >! to clobber files
+set -o noclobber
 
 eval "$(starship init zsh)"
 
