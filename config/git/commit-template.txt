@@ -1,0 +1,15 @@
+
+# Conventional Commits ########################################################
+# <type>[optional scope]: <description>
+#
+# [optional body]
+#
+# [optional footer(s)]
+#
+#
+# types include fix, feat, build, chore, ci, docs, style, refactor, perf, test
+# type may be followed by a `!` to draw attention to breaking changes
+# this is associated with a footer of BREAKING CHANGE: <description>
+#
+# Other good footers are `fixes issue #`, or `story [#]`.
+###############################################################################
