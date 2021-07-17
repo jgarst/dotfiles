@@ -1,15 +1,21 @@
 
-# Conventional Commits ########################################################
-# <type>[optional scope]: <description>
+# |<---    <type>(!): This commit will...    --->|
 #
-# [optional body]
+# |<---    Explain why this change is being made.                  --->|
 #
-# [optional footer(s)]
-#
-#
-# types include fix, feat, build, chore, ci, docs, style, refactor, perf, test
-# type may be followed by a `!` to draw attention to breaking changes
-# this is associated with a footer of BREAKING CHANGE: <description>
-#
-# Other good footers are `fixes issue #`, or `story [#]`.
-###############################################################################
+# |<---    Links and keys to relevent tickets and resources.       --->|
+
+
+# Types:
+#   feat      (new feature)
+#   fix       (bug fix)
+#   docs      (changes to documentation)
+#   test      (adding or refactoring tests; no production code change)
+#   refactor  (refactoring production code)
+#   chore     (manual updates; no production code change)
+#   other types: style, ci, perf, build, deploy
+
+# Remember:
+#   Subject is capitalized, without a period, in the imperative mood
+#   Body explains what and why vs. how, uses "-" for bullet points
+#   Major changes have "!" after the type, and a BREAKING CHANGE footer
