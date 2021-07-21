@@ -69,7 +69,7 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 ################
 
 bindsym $mod+Return exec $term
-bindsym $mod+q kill
+bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
 bindsym $mod+p exec $passmenu
 
