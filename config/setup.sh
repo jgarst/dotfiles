@@ -32,6 +32,10 @@ packages=(
     pass
     brightnessctl
     bolt
+    zsh
+    zsh-completions
+    zsh-syntax-highlighting
+    zsh-autosuggestions
 )
 # rclone?
 
