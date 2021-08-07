@@ -1,6 +1,0 @@
-# The flakey undocumented hack I am using to get XDG support lumps the
-# configuration file and local data together.  I never want to commit this
-# local data because it does not version control well, and there is a chance
-# it could contain sensitive data.
-extensions/
-user-data/

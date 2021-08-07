@@ -1,0 +1,32 @@
+env:
+  es2021: true
+extends:
+  - standard
+parser: '@typescript-eslint/parser'
+parserOptions:
+  ecmaVersion: 12
+  sourceType: module
+plugins:
+  - '@typescript-eslint'
+rules: {
+  "no-var": "error",
+  "prefer-const": "error",
+  "guard-for-in": "error",
+  "@typescript-eslint/strict-boolean-expressions": "error",
+  "no-restricted-globals": [
+    "error",
+    {
+      "name": "isNaN",
+      "message": "Use Number.isNaN instead"
+    }
+  ],
+  "space-before-function-paren": ["error", "never"],
+  "generator-star-spacing": ["error", {"before": false, "after": true}],
+  # Rules that require type level information want to be defined as part of
+  # a typescript project, with a tsconfig.json file, so that all project files
+  # can be parsed ahead of time.
+  #
+  # This excludes checking typescript rules in one off scripts, even when the
+  # rule would make sense in that context.  Check Issue #12 for context.
+  #"@typescript-eslint/return-await": ["error", "always"],
+}

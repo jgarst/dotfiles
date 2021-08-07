@@ -1,0 +1,280 @@
+" =============================================================================
+" Compatibility and Configuration Files
+" =============================================================================
+
+" Moving the vimrc file can enables vi compatibility. I never want that.
+set nocompatible
+
+" Set where vim writes artifacts and looks for configuration files.
+" This must be before other configuration.
+set directory=$XDG_CACHE_HOME/vim,~/,/tmp
+set backupdir=$XDG_CACHE_HOME/vim,~/,/tmp
+set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
+set packpath=$XDG_CONFIG_HOME/vim
+set runtimepath+=,$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after
+
+" allow per filetype indentation scripts
+filetype plugin indent on
+
+" Copy to the default CLIPBOARD buffer in X.
+" The default `vim` package at arch does not support this.
+" Install the `gvim` package or use the herecura repository.
+" https://wiki.archlinux.org/index.php/Vim#Installation
+set clipboard=unnamedplus
+
+" There is no source of truth for which terminals have which capabilities,
+" and users lie about their terminals all the time, so vim does not do a good
+" job of enabling features where possible and falling back where not.
+
+" Because of this gap, I sometimes hardcode fallback behavior for terminals
+" that do not have certain features.  Xterm can not do undercurl, so I replace
+" those terminal escape codes with the escape codes to underline.
+if &term == 'xterm-256color'
+    let &t_Cs = "\e[4m"
+    let &t_Ce = "\e[24m"
+elseif &term == 'alacritty'
+    let &t_Cs = "\e[4m"
+    let &t_Ce = "\e[24m"
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Color Scheme and Syntax
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set termguicolors
+colorscheme harlequin
+
+
+" =============================================================================
+" Completion
+" =============================================================================
+" I use the mucomplete plugin, because native vim completion uses more chords
+" than I can keep in my head, and I haven't been able to wrap my head around
+" YouCompleteMe.
+
+" `menu` and `menuone` creates suggestion menu that can use mucomplete's
+" fallback scheme.  `noinsert` allows mucomplete to perform autocompletion.
+" `popup` uses the newer and more extensible `popup` window feature as opposed
+" to the older preview windows, though I don't know what that means.
+set completeopt=menu,menuone,noinsert,popup
+
+" Disable autocompletion messages.  Hopefully the result should be apparent
+" enough without helpful explanatory text.
+set shortmess+=c
+
+set belloff+=ctrlg  " Turn off bell during completion
+
+
+" Automatically pop up suggested completions after a 3 second  pause.
+let g:mucomplete#enable_auto_at_startup = 1
+let g:mucomplete#completion_delay = 3000
+
+" Mucomplete has a slightly smarter mode of path completion, that can search
+" for paths relative to the current buffer and not `pwd`.
+let g:mucomplete#buffer_relative_paths = 1
+
+" Choose capitalization of inserted words based on context
+set ignorecase  "also causes search patterns to ignore capitalization
+set infercase
+
+" The priority for completion engines
+" 1) files
+" 2) omnicompletion
+" 3) backwards in the current file
+" 4) forward in the current file
+" 5) ctags
+" 6) default completion backwards and forwards (see below)
+" 6) dictionary words
+" 7) spelling correction
+let g:mucomplete#chains = {
+\     "default": [
+\       "path", "omni", "keyp", "keyn", "tags", "c-p", "c-n", "dict", "uspl"
+\     ]
+\   , "markdown": ["keyp", "keyn", "dict", "uspl"]
+\ }
+
+" files searched in the c-p/c-n completion engine.
+" 1) The current buffer
+" 2) Buffers in other windows
+" 3) Other loaded buffers
+" 4) Unloaded buffers
+" 5) Buffers not in the buffer list
+
+" included files, ctags, and spelling are potentially large and latent, so I
+" have broken them out into their own mucomplete engines where I want them.
+set complete=.,w,b,u,U
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Filesystem
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Don't make backups
+set nobackup
+set nowritebackup
+
+" Persistent undo
+set undofile
+set undodir=$XDG_CACHE_HOME/vim/undo
+
+" Do not use swap files
+set noswapfile
+
+
+function! DiskReload()
+    " Reload the buffer in this window if the file has been updated
+
+    let wintype = getcmdwintype()
+
+    if wintype == ':'
+        " The cmdwindow mode disables commands that edit other buffers.
+        " To get around this, we force vim to leave the cmdwindow, reload
+        " everything, then restart the cmdwindow at the same position
+        "
+        " This is a hack that probably doesn't work very well.
+
+        let g:CmdWindowLineMark=line(".")
+        call feedkeys(":q\<cr>")
+        call feedkeys(":checktime\<cr>")
+        call feedkeys("q::execute \"normal \".g:CmdWindowLineMark.\"G\"\<cr>")
+        call feedkeys(":\<cr>")
+    elseif wintype == "/"
+        let g:CmdWindowLineMark=line(".")
+        call feedkeys(":q\<cr>")
+        call feedkeys(":checktime\<cr>")
+        call feedkeys("q/:execute \"normal \".g:CmdWindowLineMark.\"G\"\<cr>")
+        call feedkeys(":\<cr>")
+    elseif wintype == "?"
+        let g:CmdWindowLineMark=line(".")
+        call feedkeys(":q\<cr>")
+        call feedkeys(":checktime\<cr>")
+        call feedkeys("q?:execute \"normal \".g:CmdWindowLineMark.\"G\"\<cr>")
+        call feedkeys(":\<cr>")
+    else
+        checktime
+    endif
+endfunction
+
+set autoread
+"au BufEnter,FocusGained * call DiskReload()
+autocmd FileChangedShellPost * 
+  \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Tabs
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set tabstop=4
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+
+
+" disable modelines, for absolute control
+set nomodeline
+
+" line numbers
+set relativenumber
+set number
+
+" Status Line
+set laststatus=2
+set statusline=%<                    " truncate at beginning
+set statusline+=%f                   " filename
+set statusline+=\ (%{&ft})           " filetype
+set statusline+=\ %-4(%m%)           " modified status, padded to 4 on the left
+set statusline+=%=                   " right justify after splitter
+set statusline+=%-19(%3l,%02c%03V%)  " line number, row, row with expanded tabs
+
+
+" syntax highlighting
+filetype plugin on
+syntax on
+
+" hardcode odd file extensions
+autocmd BufNewFile,BufRead *.zshenv set syntax=zsh
+autocmd BufNewFile,BufRead *.zshrc set syntax=zsh
+
+" search settings
+set showmatch  " live match highlighting
+set hlsearch  " highlight searches
+
+" tab, trailing white space, non breaking space, end of line, line continuation
+set list listchars=tab:│\ ,trail:·,nbsp:·,eol:¬,precedes:«,extends:»
+
+" smart line breaking
+set linebreak
+
+" spell checking
+set spell
+
+" do not spell check words that are all capitals
+syn match AcronymNoSpell '\<\(\u\|\d\)\{2,}s\?\>' contains=@NoSpell
+
+" do not complain about lower case in git commits
+autocmd FileType gitcommit setlocal spellcapcheck=
+
+
+function! RestoreCursor()
+    " The `"` mark stores the last position in the current file.
+    " This could probably be replaced with :mkview and :loadview, and be a
+    " little more robust.
+
+    if line("'\"") > 0 && line("'\"") <= line("$")
+        exe "normal! g`\""
+        return 1
+    endif
+endfunction
+
+" save position in file
+augroup resCur
+    autocmd!
+    autocmd BufWinEnter * call RestoreCursor()
+augroup END
+" Netrw supports reading and writing across networks. Disable it.
+let g:netrw_dirhistmax = 0
+
+" bind Ctrl-j and Ctrl-k to previous and next error
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+" ALE sign gutter popping in and out is too much movement
+let g:ale_sign_column_always = 1
+
+" do not complain about missing stub files
+let g:ale_python_mypy_options = '--ignore-missing-imports'
+
+let g:ale_fixers = {
+    \ 'sql': ['pgformatter'],
+    \ }
+
+let g:ale_sql_pgformatter_options = '-w 80'
+
+" Prefer vim-ale to Tsuquyomi for quickfix
+let g:tsuquyomi_disable_quickfix = 1
+
+" Use bash for shell commands
+set shell=/usr/bin/bash
+let $BASH_ENV = "$XDG_CONFIG_HOME/bash_aliases"
+
+" textwidth of 72 for mutt emails
+au BufRead /tmp/mutt-* set tw=72
+
+set secure
+
+" edit beyond the extent of the line
+set virtualedit=all
+
+" w!! Writes with sudo permissions
+cnoremap w!! execute 'silent! write !sudo tee % > /dev/null' <bar> edit!
+
+" Jedi causes vim to hesitate for a moment. Disable automatic completion.
+let g:jedi#popup_on_dot = 0
+
+" Letting Jedi-vim show signatures inline uses `conceal`, which marks the
+" buffer as modified and can interfere with other plugins.  Show signatures in
+" the command line instead.
+set noshowmode
+let g:jedi#show_call_signatures = 2

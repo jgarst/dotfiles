@@ -1,5 +1,5 @@
 #! /usr/bin/env bash
-set -uf
+set -ufx
 
 # XXX: I am shadowing common commands to use settings that are more appropriate
 # XXX: for the command line.  This breaks anything that uses those commands.

@@ -1,0 +1,18 @@
+xrdb -merge ${XDG_CONFIG_HOME}/X11/Xresources
+
+# sets capslock <--> escape
+# does not work with escapeless apple keyboard
+# setxkbmap -option caps:swapescape
+
+# sets capslock --> escape
+#setxkbmap -option caps:escape
+
+setxkbmap -option 'caps:hyper'
+xcape -e 'Caps_Lock=Escape'&
+
+[ -f /etc/xprofile ] && . /etc/xprofile
+[ -f ~/.xprofile ] && . ~/.xprofile
+
+xrandr --dpi 192
+
+exec i3

@@ -6,4 +6,4 @@
 
 # XXX: this works, but points to pacman configs wanting to be global.
 #      Unfortunately I don't know how to use pacman to modify existing files.
-/usr/bin/pacman --config "/home/jared/config/pacman.d/pacman.conf" "$@"
+/usr/bin/pacman --config "/home/jared/.config/pacman.d/pacman.conf" "$@"
