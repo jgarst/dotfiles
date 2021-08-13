@@ -8,4 +8,5 @@ return require('packer').startup(function()
 
     use 'numirias/semshi'
     use 'lifepillar/vim-mucomplete'
+    use 'neoclide/jsonc.vim'
 end)
