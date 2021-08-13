@@ -71,7 +71,8 @@ alias mv='mv -i'
 alias tsc='tsc --strict \
     --noImplicitReturns \
     --noFallthroughCasesInSwitch \
-    --noUnusedLocals'
+    --noUnusedLocals \
+    --noUncheckedIndexedAccess'
 alias rclone='rclone --dropbox-token "$(pass rclone/dropbox)"\
     --progress \
     --progress-terminal-title'
