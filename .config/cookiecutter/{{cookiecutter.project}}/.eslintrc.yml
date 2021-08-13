@@ -23,5 +23,13 @@ rules: {
   "space-before-function-paren": ["error", "never"],
   "generator-star-spacing": ["error", {"before": false, "after": true}],
   "@typescript-eslint/return-await": ["error", "always"],
-  "@typescript-eslint/strict-boolean-expressions": ["error", "always"],
+  "@typescript-eslint/strict-boolean-expressions": ["error", {
+    allowString: false,
+    allowNumber: false,
+    allowNullableObject: false,
+    allowNullableBoolean: false,
+    allowNullableString: false,
+    allowNullableNumber: false,
+    allowAny: false
+  }],
 }
