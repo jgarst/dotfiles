@@ -36,6 +36,7 @@ packages=(
     zsh-completions
     zsh-syntax-highlighting
     zsh-autosuggestions
+    zoxide
 )
 # rclone?
 

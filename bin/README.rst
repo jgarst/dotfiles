@@ -164,3 +164,12 @@ When creating a new project, I run cookiecutter and then remove configuration
 and rules that I do not want or will not use by hand.
 I use this to make deliberate choices when starting a new project, and to write
 down my preferred configuration settings in one place.
+
+
+.. _zoxide-site: https://github.com/ajeetdsouza/zoxide
+
+zoxide
+======
+`zoxide <zoxide-site_>`__ enables smart jumping to nested subdirectories based
+on fuzzy text, matching prioritized based on access patterns.
+Jumping is aliased to z and interactive path selection is aliased to zi.
