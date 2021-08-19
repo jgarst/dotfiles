@@ -22,7 +22,7 @@ set -o noclobber
 
 eval "$(starship init zsh)"
 
-eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh --cmd cd)"
 
 
 ###############################################################################
@@ -84,7 +84,6 @@ alias rclone='rclone --dropbox-token "$(pass rclone/dropbox)"\
 # The actual commands are still available through /usr/bin/<command>
 # Ideally, these reminders will eventually be removed.
 alias firefox='echo "use the browser command!"'
-alias cd='echo "try using z!"'
 
 
 
