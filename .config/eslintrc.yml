@@ -22,6 +22,7 @@ rules: {
   "space-before-function-paren": ["error", "never"],
   "generator-star-spacing": ["error", {"before": false, "after": true}],
   "no-eval": ["error"],
+  "no-unsafe-optional-chaining": ["error", {disallowArithmeticOperators: true}],
   # Rules that require type level information want to be defined as part of
   # a typescript project, with a tsconfig.json file, so that all project files
   # can be parsed ahead of time.

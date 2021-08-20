@@ -23,6 +23,7 @@ rules: {
   "space-before-function-paren": ["error", "never"],
   "generator-star-spacing": ["error", {"before": false, "after": true}],
   "no-eval": ["error"],
+  "no-unsafe-optional-chaining": ["error", {disallowArithmeticOperators: true}],
   "@typescript-eslint/return-await": ["error", "always"],
   "@typescript-eslint/strict-boolean-expressions": ["error", {
     allowString: false,
