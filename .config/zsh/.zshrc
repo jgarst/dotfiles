@@ -58,6 +58,12 @@ alias ls='exa'
 alias locate='plocate'
 alias diff='delta'
 
+# Having pip guess which python interpreter you mean leads to sadness.
+# https://snarky.ca/why-you-should-use-python-m-pip/
+# This alias prevents pip from being used outside the context of a specific
+# interpreter.
+alias pip='python3 -m pip'
+
 # pyr (python-repl) is an alias that lets me access a preferred python repl
 # without shadowing the python command.
 alias pyr='ptpython'
