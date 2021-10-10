@@ -25,6 +25,10 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh --cmd cd)"
 
 
+# direnv loads and unloads project specific variables and environments.
+eval "$(direnv hook zsh)"
+
+
 ###############################################################################
 # initialize rbenv
 #

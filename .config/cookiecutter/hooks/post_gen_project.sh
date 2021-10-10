@@ -18,3 +18,4 @@ env/bin/pip-sync
 env/bin/pre-commit install --hook-type commit-msg
 
 npm install
+direnv allow
