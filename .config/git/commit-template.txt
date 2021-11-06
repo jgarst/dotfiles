@@ -3,7 +3,7 @@
 #
 # |<---    Explain why this change is being made.                  --->|
 #
-# |<---    Links and keys to relevent tickets and resources.       --->|
+# |<---    Links and keys to relevant tickets and resources.       --->|
 
 
 # Types:
