@@ -18,7 +18,7 @@
 	tool = vimdiff
 	conflictstyle = diff3
 [core]
-	editor = vim
+	editor = nvim
     pager = delta
 [rebase]
 	autosquash = true
