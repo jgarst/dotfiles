@@ -101,12 +101,20 @@ syntax on
 autocmd BufNewFile,BufRead *.zshenv set syntax=zsh
 autocmd BufNewFile,BufRead *.zshrc set syntax=zsh
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" highlighting and special characters
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " search settings
 set showmatch  " live match highlighting
 set hlsearch  " highlight searches
 
+au TextYankPost * silent! lua vim.highlight.on_yank
+  \{timeout=700, on_visual=false}
+
 " tab, trailing white space, non breaking space, end of line, line continuation
 set list listchars=tab:│\ ,trail:·,nbsp:·,eol:¬,precedes:«,extends:»
+
 
 " smart line breaking
 set linebreak
